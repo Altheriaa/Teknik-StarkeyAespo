@@ -2,7 +2,7 @@ import HomeLayout from '../../../Layouts/HomeLayout';
 import { Link, usePage } from '@inertiajs/react';
 import { useState } from 'react';
 
-export default function VisiSistemInformasi({ }) {
+export default function VisiSistemInformasi({ Kaprodi }) {
     const { flash } = usePage().props;
     const [openAccordion, setOpenAccordion] = useState(null);
 
@@ -33,12 +33,12 @@ export default function VisiSistemInformasi({ }) {
                             <div className="kaprodi-card position-relative p-5 rounded-4 text-center fade-in">
                                 <div className="kaprodi-img-wrapper">
                                     {/* <!-- Use the image found in assets --> */}
-                                    <img src=""
+                                    <img src={`/storage/${Kaprodi.gambar_dosen}`}
                                         alt="" />
                                 </div>
 
                                 <div className="mt-4 pt-3">
-                                    <h4 className="fw-bold mb-1"></h4>
+                                    <h4 className="fw-bold mb-1">{Kaprodi.nama_dosen}</h4>
                                     <p className="small text-uppercase opacity-75 mb-4" style={{ letterSpacing: "1px" }}>KETUA PROGRAM STUDI
                                         SISTEM INFORMASI</p>
 
@@ -48,21 +48,6 @@ export default function VisiSistemInformasi({ }) {
                                         "Kami berkomitmen mencetak lulusan yang tidak hanya ahli teknis, tetapi juga memiliki
                                         integritas dan visi kepemimpinan."
                                     </p>
-
-                                    <div className="d-flex justify-content-center gap-3">
-                                        <Link href="#"
-                                            className="btn btn-sm btn-outline-light rounded-circle d-flex align-items-center justify-content-center"
-                                            style={{ width: "40px", height: "40px", borderColor: "rgba(255,255,255,0.2)" }}><i
-                                                className='bx bx-envelope'></i></Link>
-                                        <Link href="#"
-                                            className="btn btn-sm btn-outline-light rounded-circle d-flex align-items-center justify-content-center"
-                                            style={{ width: "40px", height: "40px", borderColor: "rgba(255,255,255,0.2)" }}><i
-                                                className='bx bxs-graduation'></i></Link>
-                                        <Link href="#"
-                                            className="btn btn-sm btn-outline-light rounded-circle d-flex align-items-center justify-content-center"
-                                            style={{ width: "40px", height: "40px", borderColor: "rgba(255,255,255,0.2)" }}><i
-                                                className='bx bx-share-alt'></i></Link>
-                                    </div>
                                 </div>
                             </div>
                         </div>
