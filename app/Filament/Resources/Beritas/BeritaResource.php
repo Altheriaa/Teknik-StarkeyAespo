@@ -13,6 +13,7 @@ use Filament\Actions\EditAction;
 use Filament\Actions\ViewAction;
 use Filament\Forms\Components\DatePicker;
 use Filament\Forms\Components\FileUpload;
+use Filament\Forms\Components\RichEditor;
 use Filament\Forms\Components\TextInput;
 use Filament\Forms\Components\Textarea;
 use Filament\Infolists\Components\ImageEntry;
@@ -43,15 +44,39 @@ class BeritaResource extends Resource
         return $schema
             ->components([
                 TextInput::make('title')
-                    ->required(),
-                TextInput::make('slug'),
-                Textarea::make('description')
+                    ->label('Judul')
                     ->required()
                     ->columnSpanFull(),
+
+                TextInput::make('slug')
+                    ->unique(
+                        table: 'berita',
+                        column: 'slug',
+                        ignorable: fn($record) => $record,
+                    )
+                    ->label('Slug')
+                    ->required()
+                    ->columnSpanFull(),
+
+                RichEditor::make('description')
+                    ->label('Deksripsi Berita')
+                    ->required()
+                    ->columnSpanFull(),
+
                 FileUpload::make('image_news')
-                    ->image(),
+                    ->label('Gambar Berita (Format .jpg .png, .jpeg)')
+                    ->required()
+                    ->directory('uploads/berita')
+                    ->disk('public')
+                    ->columnSpan('full')
+                    ->imagePreviewHeight('250')
+                    ->acceptedFileTypes(['image/jpeg', 'image/png'])
+                    ->rules(['mimes:jpeg,jpg,png']),
+
                 DatePicker::make('date')
-                    ->required(),
+                    ->label('Tanggal Berita')
+                    ->required()
+                    ->columnSpanFull(),
             ]);
     }
 
@@ -65,6 +90,7 @@ class BeritaResource extends Resource
                 TextEntry::make('description')
                     ->columnSpanFull(),
                 ImageEntry::make('image_news')
+                    ->disk('public')
                     ->placeholder('-'),
                 TextEntry::make('date')
                     ->label('Tanggal Berita')
@@ -79,30 +105,38 @@ class BeritaResource extends Resource
         return $table
             ->recordTitleAttribute('title')
             ->columns([
-                TextColumn::make('title')
-                    ->label('Judul Berita')
-                    ->searchable(),
-                TextColumn::make('slug')
-                    ->label('Slug')
-                    ->searchable(),
                 ImageColumn::make('image_news')
-                    ->label('Gambar Berita'),
+                    ->label('Gambar Berita')
+                    ->disk('public')
+                    ->square()
+                    ->width(200)
+                    ->height(200),
+
+                TextColumn::make('slug')
+                    ->label('slug')
+                    ->searchable()
+                    ->limit(50)
+                    ->wrap(),
+
+                TextColumn::make('title')
+                    ->label('Judul')
+                    ->searchable()
+                    ->limit(50)
+                    ->wrap(),
+
+                TextColumn::make('description')
+                    ->label('Deskripsi')
+                    ->limit(100)
+                    ->wrap(),
+
                 TextColumn::make('date')
-                    ->label('Tanggal Berita')
-                    ->date()
+                    ->label('Tanggal Publikasi')
+                    ->dateTime('d M Y')
+                    ->searchable()
                     ->sortable(),
+
                 TextColumn::make('views')
-                    ->label('Jumlah Tayang')
-                    ->numeric()
-                    ->sortable(),
-                TextColumn::make('created_at')
-                    ->dateTime()
-                    ->sortable()
-                    ->toggleable(isToggledHiddenByDefault: true),
-                TextColumn::make('updated_at')
-                    ->dateTime()
-                    ->sortable()
-                    ->toggleable(isToggledHiddenByDefault: true),
+                    ->label('Tayangan'),
             ])
             ->filters([
                 //

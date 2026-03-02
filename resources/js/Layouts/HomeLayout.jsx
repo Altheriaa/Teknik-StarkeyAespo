@@ -1,10 +1,14 @@
 import { Link } from '@inertiajs/react';
 import { useState } from 'react';
+import { usePage } from '@inertiajs/react';
 
 export default function HomeLayout({ children }) {
 
     const [mobileOpen, setMobileOpen] = useState(false)
     const [activeMenu, setActiveMenu] = useState("main")
+    const [isVisitorHovered, setIsVisitorHovered] = useState(false);
+
+    const { flash, visitors } = usePage().props;
 
     const showMenu = (menu) => {
         setActiveMenu(menu)
@@ -32,7 +36,7 @@ export default function HomeLayout({ children }) {
                                 <li><Link href="/roadmap" className="no-border-hover">Roadmap</Link></li>
                             </ul>
                         </li>
-                        <li><a href="#">Berita</a></li>
+                        <li><Link href="/berita">Berita</Link></li>
                         <li><a href="#">Program Studi</a>
                             <ul className="submenu_dropdown-nav">
                                 <li><a href="#" className="no-border-hover">Sistem Informasi</a>
@@ -136,12 +140,12 @@ export default function HomeLayout({ children }) {
                         <ul className="menu-slide main-menu">
                             <li><Link href="/">Home</Link></li>
                             <li onClick={() => showMenu("profile")}>Profile</li>
-                            <li><a href="#">Berita</a></li>
+                            <li><Link href="/berita">Berita</Link></li>
                             <li onClick={() => showMenu("program_studi")}>Program Studi</li>
                             <li onClick={() => showMenu("pendidikan")}>Pendidikan</li>
                             <li onClick={() => showMenu("kemahasiswaan")}>Kemahasiswaan</li>
                             <li onClick={() => showMenu("award")}>Award</li>
-                            <li><a href="{{ route('kerjasama') }}">Kerjasama</a></li>
+                            <li><Link href="/kerjasama">Kerjasama</Link></li>
                             <li onClick={() => showMenu("download")}>Download</li>
                             <li onClick={() => showMenu("quality_assurance")}>Quality Assurance</li>
                         </ul>
@@ -263,6 +267,39 @@ export default function HomeLayout({ children }) {
             {children}
             {/* END CONTENT */}
 
+            {/* visitor */}
+            {visitors && (
+                <div 
+                    className="visitor-widget-container"
+                    onMouseEnter={() => setIsVisitorHovered(true)}
+                    onMouseLeave={() => setIsVisitorHovered(false)}
+                >
+                    <div className={`visitor-popover shadow ${isVisitorHovered ? 'show' : ''}`}>
+                        <div className="visitor-popover-list">
+                            <div className="visitor-row"><span className="v-label">Hari Ini</span><span className="v-value">{visitors.today}</span></div>
+                            <div className="visitor-row"><span className="v-label">Kemarin</span><span className="v-value">{visitors.yesterday}</span></div>
+                            <div className="visitor-row"><span className="v-label">Minggu Ini</span><span className="v-value">{visitors.thisWeek}</span></div>
+                            <div className="visitor-row"><span className="v-label">Minggu Lalu</span><span className="v-value">{visitors.lastWeek}</span></div>
+                            <div className="visitor-row"><span className="v-label">Bulan Ini</span><span className="v-value">{visitors.thisMonth}</span></div>
+                            <div className="visitor-row"><span className="v-label">Bulan Lalu</span><span className="v-value">{visitors.lastMonth}</span></div>
+                            <div className="visitor-row"><span className="v-label">Total Akses</span><span className="v-value">{visitors.total}</span></div>
+                        </div>
+                    </div>
+                    
+                    <div className="visitor-pill shadow-sm">
+                        <div className="visitor-icon-box">
+                            <i className="fas fa-chart-bar"></i>
+                        </div>
+                        <div className="visitor-text ms-3">
+                            <h6 className="mb-0 fw-bold">Kunjungan</h6>
+                            <small>{visitors.today} Hari Ini</small>
+                        </div>
+                        <i className={`fas fa-chevron-up ms-3 visitor-chevron ${isVisitorHovered ? 'rotate' : ''}`}></i>
+                    </div>
+                </div>
+            )}
+            {/* visitor end */}
+
             {/* FOOTER */}
             <footer className="bg-footer text-center text-dark">
                 {/* Grid container */}
@@ -325,8 +362,8 @@ export default function HomeLayout({ children }) {
 
                 {/* <!-- Copyright --> */}
                 <div className="text-center p-3" style={{backgroundColor: "rgba(0, 0, 0, 0.05)"}}>
-                    © 2024 Copyright:
-                    <a className="text-reset fw-bold" href="#">Universitas Abulyatama, All Right Reserved</a>
+                    © 2024 Copyright :
+                    <a className="text-reset fw-bold" href="#"> Universitas Abulyatama, All Right Reserved</a>
                 </div>
                 {/* <!-- Copyright --> */}
             </footer>

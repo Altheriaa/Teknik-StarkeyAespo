@@ -693,14 +693,14 @@ nav {
 /* END HERO */
 
 
-
 /* INDEX START */
 /* video */
 .index-video-hero {
   position: relative;
   width: 100%;
-  height: auto;
+  height: 90vh;
   overflow: hidden;
+  background-color: #000;
 }
 
 .index-video {
@@ -731,6 +731,274 @@ nav {
   }
 }
 
+
+/* Swiper Custom Styles */
+.index-video-hero .swiper {
+  width: 100%;
+  height: 100%;
+}
+
+.swiper-slide {
+  position: relative;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+}
+
+.swiper-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to right, rgba(1, 45, 4, 0.7) 0%, rgba(0, 0, 0, 0.3) 100%);
+  z-index: 10;
+}
+
+.slide-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  z-index: 20;
+  color: white;
+  text-align: center;
+  max-width: 800px;
+  padding: 0 20px;
+  animation: fadeInUp 1s ease-out forwards;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translate(-50%, calc(-50% + 30px));
+  }
+  to {
+    opacity: 1;
+    transform: translate(-50%, -50%);
+  }
+}
+
+.slide-content h1 {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  color: #FFD700;
+}
+
+.slide-content p {
+  font-size: 1.2rem;
+  margin-bottom: 30px;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+.slide-content .btn-hero {
+  background-color: #FFD700;
+  color: #012d04;
+  padding: 12px 30px;
+  font-weight: 600;
+  border-radius: 30px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: all 0.3s ease;
+  border: none;
+  display: inline-block;
+  text-decoration: none;
+}
+
+.slide-content .btn-hero:hover {
+  background-color: #FFF;
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(255, 215, 0, 0.4);
+}
+
+/* Custom Swiper Navigation */
+.swiper-button-next,
+.swiper-button-prev {
+  color: #FFF !important;
+  background: transparent;
+  width: 50px !important;
+  height: 50px !important;
+  border-radius: 50%;
+  transition: all 0.3s ease;
+  opacity: 0; /* Hidden by default */
+}
+
+.index-video-hero:hover .swiper-button-next,
+.index-video-hero:hover .swiper-button-prev {
+  opacity: 0.7; /* Show when carousel is hovered */
+}
+
+.swiper-button-next:hover,
+.swiper-button-prev:hover {
+  background: rgba(255, 255, 255, 0.2);
+  opacity: 1 !important;
+  transform: scale(1.1);
+}
+
+.swiper-button-next::after,
+.swiper-button-prev::after {
+  font-size: 24px !important;
+  font-weight: bold;
+}
+
+/* Custom Swiper Pagination */
+.swiper-pagination-bullet {
+  background: rgba(255, 255, 255, 0.4) !important;
+  opacity: 1 !important;
+  width: 6px !important;
+  height: 6px !important;
+  border-radius: 50% !important;
+  margin: 0 4px !important;
+  transition: all 0.3s ease;
+}
+
+.swiper-pagination-bullet:hover {
+  background: rgba(255, 255, 255, 0.8) !important;
+}
+
+.swiper-pagination-bullet-active {
+  background: #ffffff !important;
+  width: 20px !important;
+  border-radius: 4px !important;
+}
+
+.index-video-hero .swiper-pagination {
+  bottom: 20px !important;
+}
+
+@media (max-width: 768px) {
+  .slide-content h1 {
+    font-size: 2rem;
+  }
+  .slide-content p {
+    font-size: 1rem;
+  }
+}
+
+/* Halaman Berita - Detail Berita */
+.news-card {
+    border: none;
+    border-radius: 1.75rem;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    background-color: #fff;
+}
+
+.news-card:hover {
+    transform: translateY(-7px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+}
+
+.news-card .card-img-top {
+    border-top-left-radius: 0.37rem;
+    border-top-right-radius: 0.37rem;
+    aspect-ratio: 16 / 10;
+    object-fit: cover;
+}
+
+.news-card .card-body {
+    padding: 1rem;
+}
+
+.news-card .card-title {
+    font-weight: 600;
+    color: #333;
+    /* Batasi judul hanya 2 baris */
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    min-height: 1.5em;
+    /* Sesuaikan dengan ukuran font Anda */
+}
+
+.news-card .card-text {
+    color: #666;
+    /* Batasi deskripsi hanya 3 baris */
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.news-card .card-footer {
+    background-color: transparent;
+    border-top: none;
+    padding: 0 1.25rem 1.25rem;
+}
+
+.article-meta span {
+    color: #6c757d;
+    font-size: 0.9em;
+}
+
+.article-meta i {
+    margin-right: 0.5rem;
+    color: #033108;
+    /* Warna biru primer */
+}
+
+.article-body {
+    line-height: 1.8;
+    font-size: 1.1rem;
+    color: #343a40;
+}
+
+.sidebar .list-group-item {
+    border: none;
+    padding: 0;
+}
+
+.sidebar .latest-post-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+    text-decoration: none;
+    color: inherit;
+    transition: background-color 0.2s ease;
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+}
+
+.sidebar .latest-post-item:hover {
+    background-color: #e9ecef;
+}
+
+.sidebar .latest-post-item img {
+    width: 80px;
+    height: 65px;
+    object-fit: cover;
+    border-radius: 0.375rem;
+    margin-right: 1rem;
+}
+
+.sidebar .latest-post-item .post-title {
+    font-weight: 600;
+    color: #212529;
+    margin-bottom: 0.25rem;
+    line-height: 1.3;
+    /* Batasi judul hanya 2 baris */
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.sidebar .latest-post-item small {
+    font-size: 0.8em;
+}
+
+.breadcrumb li a {
+    color: #333;
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.2s ease;
+} 
+/* End Halaman Berita - Detail Berita */
 
 /* berita baru */
 .container-fluid-news {
@@ -1971,7 +2239,6 @@ nav {
     /* Reduce width of gradient on smaller screens */
   }
 }
-
 /*end halaman index*/
 
 /* pu */
@@ -5054,3 +5321,130 @@ DOWNLOAD .download-table-wrapper {
 }
 
 /* end footer */
+/* Fancy Visitor Widget */
+.visitor-widget-container {
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+    z-index: 1000;
+}
+
+.visitor-pill {
+    background-color: rgba(97, 123, 98, 0.9); /* Olive green with transparency */
+    backdrop-filter: blur(8px); /* Added blur effect */
+    color: white;
+    border-radius: 40px;
+    padding: 6px 12px 6px 6px; /* Reduced padding */
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    transition: all 0.3s ease;
+    border: 1px solid rgba(255,255,255,0.1);
+}
+
+.visitor-icon-box {
+    background-color: white;
+    color: #aebdb0;
+    width: 32px; /* Smaller icon box */
+    height: 32px; /* Smaller icon box */
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 0.95rem; /* Smaller icon */
+}
+
+.visitor-text h6 {
+    font-size: 0.95rem; /* Smaller text */
+}
+
+.visitor-text small {
+    font-size: 0.75rem; /* Smaller text */
+    opacity: 0.9;
+}
+
+.visitor-chevron {
+    transition: transform 0.3s ease;
+    font-size: 0.9rem;
+    opacity: 0.8;
+}
+
+.visitor-chevron.rotate {
+    transform: rotate(180deg);
+}
+
+/* Hover Menu */
+.visitor-popover {
+    position: absolute;
+    bottom: 52px; /* Adjusted height */
+    right: 1px; /* Aligned to the right instead of left */
+    background-color: white;
+    color: #333;
+    border-radius: 20px;
+    border: 1px solid #e0e0e0;
+    width: 190px;
+    padding: 15px 0;
+    box-shadow: 0 -5px 25px rgba(0,0,0,0.1);
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(10px);
+    transition: all 0.3s ease;
+    /* This z-index sits slightly below the pill for overlap effect */
+    z-index: -1;
+}
+
+.visitor-popover.show {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.visitor-popover-list {
+    display: flex;
+    flex-direction: column;
+}
+
+.visitor-row {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 25px;
+    transition: background-color 0.2s ease;
+    font-size: 0.8rem;
+}
+
+.visitor-row:hover {
+    background-color: #f9f9f9;
+}
+
+.visitor-row .v-label {
+    color: #444;
+}
+
+.visitor-row .v-value {
+    font-weight: 800;
+    color: #222;
+}
+
+@media (max-width: 768px) {
+    .visitor-widget-container {
+        bottom: 15px;
+        right: 15px; /* Match mobile position */
+    }
+    .visitor-pill {
+        padding: 6px 10px 6px 6px;
+    }
+    .visitor-icon-box {
+        width: 30px;
+        height: 30px;
+    }
+    .visitor-text h6 {
+        font-size: 0.85rem;
+    }
+    .visitor-text small {
+        font-size: 0.65rem;
+    }
+    .visitor-popover {
+        right: 0;
+    }
+}

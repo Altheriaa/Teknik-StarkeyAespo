@@ -1,17 +1,69 @@
 import HomeLayout from '../../Layouts/HomeLayout';
 import { Link, usePage } from '@inertiajs/react';
 import { router } from '@inertiajs/react';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { Autoplay, Pagination, Navigation } from 'swiper/modules';
 
-export default function Index({}) {
+import 'swiper/css';
+import 'swiper/css/pagination';
+import 'swiper/css/navigation';
+import { useEffect } from 'react';
+
+export default function Index({ beritas, agendas, pengumumans }) {
     
     const { flash } = usePage().props;
+
+    useEffect(() => {
+        var copy = document.querySelector(".logos-slide").cloneNode(true);
+        document.querySelector(".logos").appendChild(copy);
+    }, []);
 
     return (
         <HomeLayout header="Home">
             <div className="index-video-hero">
-                <video className="index-video" autoPlay loop muted>
-                    <source src="asset/Intro Teknik 1.mp4" type="video/mp4" />
-                </video>
+                <Swiper
+                    spaceBetween={0}
+                    centeredSlides={true}
+                    autoplay={{
+                        delay: 6000,
+                        disableOnInteraction: false,
+                    }}
+                    pagination={{
+                        clickable: true,
+                    }}
+                    navigation={false}
+                    modules={[Autoplay, Pagination, Navigation]}
+                    className="mySwiper"
+                    style={{ width: '100%', height: '100%' }}
+                >
+                    {/* First Slide: Video */}
+                    <SwiperSlide>
+                        <video className="index-video" autoPlay loop muted style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%', objectFit: 'cover', zIndex: 0 }}>
+                            <source src="asset/Intro Teknik 1.mp4" type="video/mp4" />
+                        </video>
+                        <div className="swiper-overlay" style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%', background: 'linear-gradient(to right, rgba(1, 45, 4, 0.7) 0%, rgba(0, 0, 0, 0.3) 100%)', zIndex: 1 }}></div>
+                        {/* <div className="slide-content">
+                            <h1>Fakultas Teknik Unaya</h1>
+                            <p>Mencetak generasi insinyur unggul, inovatif, dan berakhlak mulia untuk tantangan masa depan revolusi industri 5.0.</p>
+                            <a href="#about" className="btn-hero">Jelajahi Sekarang</a>
+                        </div> */}
+                    </SwiperSlide>
+
+                    <SwiperSlide>
+                        <video className="index-video" autoPlay loop muted style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%', objectFit: 'cover', zIndex: 0 }}>
+                            <source src="asset/Intro Teknik 1.mp4" type="video/mp4" />
+                        </video>
+                        <div className="swiper-overlay" style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%', background: 'linear-gradient(to right, rgba(1, 45, 4, 0.7) 0%, rgba(0, 0, 0, 0.3) 100%)', zIndex: 1 }}></div>
+                    </SwiperSlide>
+
+                    <SwiperSlide>
+                        <video className="index-video" autoPlay loop muted style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%', objectFit: 'cover', zIndex: 0 }}>
+                            <source src="asset/Intro Teknik 1.mp4" type="video/mp4" />
+                        </video>
+                        <div className="swiper-overlay" style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%', background: 'linear-gradient(to right, rgba(1, 45, 4, 0.7) 0%, rgba(0, 0, 0, 0.3) 100%)', zIndex: 1 }}></div>
+                    </SwiperSlide>
+
+                </Swiper>
             </div>
 
             {/* <!-- Header--> */}
@@ -341,28 +393,40 @@ export default function Index({}) {
                     <a style={{ textDecoration: 'none', color: 'white' }} href="/berita">Lihat Berita Lainnya</a>
                 </div>
                 <div className="col-md-12">
-                    <div id="news-slider" className="owl-carousel">
-                        {/* @foreach($beritas as $berita)
-                            <a href="{{ route('berita.show', $berita->slug) }}" style="text-decoration: none">
-                                <div class="post-slide">
-                                    <div class="post-img">
-                                        <img src="{{ asset('storage/' . $berita->image_news) }}" alt="">
-                                        <span class="over-layer"><i class="fa fa-link"></i></span>
+                    <Swiper
+                        modules={[Autoplay, Pagination, Navigation]}
+                        slidesPerView={1}
+                        breakpoints={{
+                            768: { slidesPerView: 2 },
+                            1024: { slidesPerView: 3 },
+                        }}
+                        autoplay={{ delay: 5000, disableOnInteraction: false }}
+                        pagination={{ clickable: true, dynamicBullets: true }}
+                    >
+                        {beritas.data.map((berita) => (
+                            <SwiperSlide key={berita.id}>
+                                <Link href={`/berita/${berita.slug}`} style={{ textDecoration: 'none' }}>
+                                    <div className="post-slide h-100">
+                                        <div className="post-img">
+                                            <img src={`/storage/${berita.image_news}`} alt={berita.title} />
+                                            <span className="over-layer"><i className="fa fa-link"></i></span>
+                                        </div>
+                                        <div className="post-content">
+                                            <h3 className="post-title">
+                                                <span>{berita.title}</span>
+                                            </h3>
+                                            <p className="post-description">
+                                                {berita.description.replace(/(<([^>]+)>)/gi, "").substring(0, 100)}...
+                                            </p>
+                                            <span className="post-date">
+                                                <i className="fa fa-clock-o"></i> {new Date(berita.date).toLocaleDateString('id-ID', { day: 'numeric', month: 'long', year: 'numeric' })}
+                                            </span>
+                                        </div>
                                     </div>
-                                    <div class="post-content">
-                                        <h3 class="post-title">
-                                            <span>{{ $berita->title }}</span>
-                                            <!-- <h3>{{ $berita->title }}</h3> -->
-                                        </h3>
-                                        <p class="post-description" data-full-description="{{ $berita->description }}">
-                                            {!! Str::limit($berita->description, 100) !!}
-                                        </p>
-                                        <span class="post-date"><i class="fa fa-clock-o"></i>{{ $berita->date }}</span>
-                                    </div>
-                                </div>
-                            </a>
-                        @endforeach */}
-                    </div>
+                                </Link>
+                            </SwiperSlide>
+                        ))}
+                    </Swiper>
                 </div>
             </div>
 
@@ -385,33 +449,33 @@ export default function Index({}) {
                     {/* <!-- pengunguman --> */}
                     <section className="announcements">
                         <h2 className="title-announcement">Pengumuman</h2>
-                        {/* @foreach ($pengumumans as $pengumuman)
-                            <a href="{{ $pengumuman->link }}" class="card-link">
-                                <div class="announcement">
-                                    <div class="date1">
-                                        <span>{{ $pengumuman->tanggal_pengumuman }}</span><br>{{ $pengumuman->bulan_pengumuman }}
+                        {pengumumans.map((pengumuman) => (
+                            <a href={pengumuman.link} className="card-link">
+                                <div className="announcement">
+                                    <div className="date1">
+                                        <span>{pengumuman.tanggal_pengumuman}</span><br/>{pengumuman.bulan_pengumuman}
                                     </div>
-                                    <div class="content">
-                                        <h3 class="title">{{ $pengumuman->judul_pengumuman }}</h3>
-                                        <p class="description">{{ $pengumuman->deskripsi_pengumuman }}</p>
+                                    <div className="content">
+                                        <h3 className="title">{pengumuman.judul_pengumuman}</h3>
+                                        <p className="description">{pengumuman.deskripsi_pengumuman}</p>
                                     </div>
                                 </div>
                             </a>
-                        @endforeach */}
+                        ))}
                     </section>
 
                     {/* <!-- agenda --> */}
                     <section className="agenda">
                         <h2 className="title-event">Agenda</h2>
-                        {/* @foreach ($agendas as $agenda)
-                            <div class="event">
-                                <div class="date"><span>{{ $agenda->tahun_agenda }}</span></div>
-                                <div class="content">
-                                    <h3 class="event-title">{{ $agenda->judul_agenda }}</h3>
-                                    <p class="time">{{ $agenda->masa_agenda }}</p>
+                        {agendas.map((agenda) => (
+                            <div className="event">
+                                <div className="date"><span>{agenda.tahun_agenda}</span></div>
+                                <div className="content">
+                                    <h3 className="event-title">{agenda.nama_agenda}</h3>
+                                    <p className="time">{agenda.masa_agenda}</p>
                                 </div>
                             </div>
-                        @endforeach */}
+                        ))}
                     </section>
                 </div>
             </div>
@@ -497,26 +561,8 @@ export default function Index({}) {
                 </div>
             </section>
 
-
             <section className="sponsor-logos-section">
                 <div className="logos">
-                    <div className="logos-slide">
-                        <img src="asset/img/sponsor/Ban PT.jpg" />
-                        <img src="asset/img/sponsor/Lam Teknikk.jpeg" />
-                        <img src="asset/img/sponsor/Kampus Merdeka.jpg" />
-                        <img src="asset/img/sponsor/Tut Wuri.jpg" />
-                        <img src="asset/img/sponsor/pancacita.png" />
-                        <img src="asset/img/sponsor/Syiah Kuala.png" />
-                        <img src="asset/img/sponsor/UPM.png" />
-                        <img src="asset/img/sponsor/teuku umar.png" />
-                        <img src="asset/img/sponsor/iskandar muda.png" />
-                        <img src="asset/img/sponsor/politeknik negeri lhokseumawe.png" />
-                        <img src="asset/img/sponsor/instutut sains.png" />
-                        <img src="asset/img/sponsor/halu oleo.png" style={{ width: '200px', height: 'auto' }} />
-                        <img src="asset/img/sponsor/bank sampah.png" />
-                        <img src="asset/img/sponsor/Solusi Bangun Indonesia.png" style={{ width: '200px', height: 'auto' }} />
-                    </div>
-                    {/* Di-duplicate agar efek infinite scroll (animasi) berjalan mulus tanpa ruang kosong */}
                     <div className="logos-slide">
                         <img src="asset/img/sponsor/Ban PT.jpg" />
                         <img src="asset/img/sponsor/Lam Teknikk.jpeg" />
