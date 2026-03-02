@@ -41,23 +41,23 @@ export default function HomeLayout({ children }) {
                             <ul className="submenu_dropdown-nav">
                                 <li><a href="#" className="no-border-hover">Sistem Informasi</a>
                                     <ul className="dropdown-nav">
-                                        <li><a href="#" className="no-border-hover">Visi</a></li>
-                                        <li><a href="#" className="no-border-hover">Dosen</a></li>
-                                        <li><a href="#" className="no-border-hover">Kurikulum</a></li>
+                                        <li><Link href="/sistem-informasi/visi" className="no-border-hover">Visi</Link></li>
+                                        <li><Link href="/sistem-informasi/dosen" className="no-border-hover">Dosen</Link></li>
+                                        <li><Link href="/sistem-informasi/kurikulum" className="no-border-hover">Kurikulum</Link></li>
                                     </ul>
                                 </li>
                                 <li><a href="#" className="no-border-hover">Teknik Sipil</a>
                                     <ul className="dropdown-nav">
-                                        <li><a href="#" className="no-border-hover">Visi</a></li>
-                                        <li><a href="#" className="no-border-hover">Dosen</a></li>
-                                        <li><a href="#" className="no-border-hover">Kurikulum</a></li>
+                                        <li><Link href="/teknik-sipil/visi" className="no-border-hover">Visi</Link></li>
+                                        <li><Link href="/teknik-sipil/dosen" className="no-border-hover">Dosen</Link></li>
+                                        <li><Link href="/teknik-sipil/kurikulum" className="no-border-hover">Kurikulum</Link></li>
                                     </ul>
                                 </li>
                                 <li><a href="#" className="no-border-hover">Teknik Mesin</a>
                                     <ul className="dropdown-nav">
-                                        <li><a href="#" className="no-border-hover">Visi</a></li>
-                                        <li><a href="#" className="no-border-hover">Dosen</a></li>
-                                        <li><a href="#" className="no-border-hover">Kurikulum</a></li>
+                                        <li><Link href="/teknik-mesin/visi" className="no-border-hover">Visi</Link></li>
+                                        <li><Link href="/teknik-mesin/dosen" className="no-border-hover">Dosen</Link></li>
+                                        <li><Link href="/teknik-mesin/kurikulum" className="no-border-hover">Kurikulum</Link></li>
                                     </ul>
                                 </li>
                             </ul>

@@ -2436,9 +2436,24 @@ nav {
 
 .teknik-accordion .accordion-body {
   background-color: #ffffff;
+  color: #333333; /* Forcing text color so it's not white-on-white */
   padding: 1.25rem 1.5rem;
   font-size: 0.95rem;
   line-height: 1.6;
+  opacity: 1 !important;
+  visibility: visible !important;
+}
+
+.teknik-accordion .accordion-body ol {
+  list-style-type: decimal;
+  padding-left: 1.5rem;
+  margin-bottom: 0;
+}
+
+.teknik-accordion .accordion-body ul {
+  list-style-type: disc;
+  padding-left: 1.5rem;
+  margin-bottom: 0;
 }
 
 .icon-box {
