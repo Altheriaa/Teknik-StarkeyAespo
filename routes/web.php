@@ -9,6 +9,7 @@ use App\Http\Controllers\BeritaController;
 use App\Http\Controllers\DosenController;
 use App\Http\Controllers\VisiMisiProdiController;
 use App\Http\Controllers\KurikulumController;
+use App\Http\Controllers\OrganisasiController;
 
 // Route Home
 Route::get('/', [HomeController::class, 'index']);
@@ -80,4 +81,37 @@ Route::get('/perpustakaan', function () {
 Route::get('/jurnal', function () {
     return inertia('Pendidikan/Jurnal');
 });
+
+// Kemahasiswaaw
+// Layanan Komunikasi Orang Tua
+Route::get('/layanan-komunikasi', function () {
+    return inertia('Kemahasiswaan/KomunikasiOrangTua');
+});
+
+// Layanan Surat Aktif
+Route::get('/layanan-surat-aktif', function () {
+    return inertia('Kemahasiswaan/LayananSuratAktif');
+});
+
+// Organisasi Mahasiswa
+// Bem
+Route::get('/bem', [OrganisasiController::class, 'bem']);
+// Bem
+Route::get('/himasi', [OrganisasiController::class, 'himasi']);
+// Bem
+Route::get('/himatesya', [OrganisasiController::class, 'himatesya']);
+// Bem
+Route::get('/hmm', [OrganisasiController::class, 'hmm']);
+
+// Tracer Study
+Route::get('/tracer-study', function () {
+    return inertia('Kemahasiswaan/TracerStudy');
+});
+
+// Engineering Career Centre
+Route::get('/engineering-career-centre', function () {
+    return inertia('Kemahasiswaan/EngineeringCareerCentre');
+});
+
+
 

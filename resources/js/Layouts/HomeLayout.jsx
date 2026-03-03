@@ -72,20 +72,20 @@ export default function HomeLayout({ children }) {
                         </li>
                         <li><a href="#">Kemahasiswaan</a>
                             <ul className="submenu_dropdown-nav">
-                                <li><Link href="#" className="no-border-hover">Layanan Komunikasi Orang Tua/Wali
+                                <li><Link href="/layanan-komunikasi" className="no-border-hover">Layanan Komunikasi Orang Tua/Wali
                                         Mahasiswa</Link></li>
-                                <li><Link href="#" className="no-border-hover">Layanan Permohonan Surat
+                                <li><Link href="/layanan-surat-aktif" className="no-border-hover">Layanan Permohonan Surat
                                         Aktif Kuliah</Link></li>
                                 <li><Link href="#" className="no-border-hover">Organisasi Mahasiswa</Link>
                                     <ul className="dropdown-nav">
-                                        <li><Link href="#" className="no-border-hover">BEM</Link></li>
-                                        <li><Link href="#" className="no-border-hover">Himasi</Link></li>
-                                        <li><Link href="#" className="no-border-hover">Himatesya</Link></li>
-                                        <li><Link href="#" className="no-border-hover">HMM</Link></li>
+                                        <li><Link href="/bem" className="no-border-hover">BEM</Link></li>
+                                        <li><Link href="/himasi" className="no-border-hover">Himasi</Link></li>
+                                        <li><Link href="/himatesya" className="no-border-hover">Himatesya</Link></li>
+                                        <li><Link href="/hmm" className="no-border-hover">HMM</Link></li>
                                     </ul>
                                 </li>
-                                <li><Link href="#" className="no-border-hover">Tracer Study</Link></li>
-                                <li><Link href="#" className="no-border-hover">Engineering Career Centre</Link></li>
+                                <li><Link href="/tracer-study" className="no-border-hover">Tracer Study</Link></li>
+                                <li><Link href="/engineering-career-centre" className="no-border-hover">Engineering Career Centre</Link></li>
                             </ul>
                         </li>
                         <li><Link href="#">Award</Link>

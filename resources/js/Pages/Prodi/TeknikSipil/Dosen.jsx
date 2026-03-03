@@ -37,7 +37,7 @@ export default function DosenTeknikSipil({ DosenSipils }) {
                                     <h6>Riwayat Pendidikan</h6>
                                     <p>Riwayat Pendidikan</p>
                                     <p>(Universitas)</p>
-                                    <a href="{dosen.link_publikasi}" target="_blank">
+                                    <a href={dosen.link_publikasi} target="_blank">
                                         <button className="btn-publications">Lihat Publikasi</button>
                                     </a>
                                     <div className="button-info">

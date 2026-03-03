@@ -33,11 +33,11 @@ export default function DosenSistemInformasi({ DosenSis }) {
                                     <h6>Riwayat Pendidikan</h6>
                                     <p>Riwayat Pendidikan</p>
                                     <p>(Universitas)</p>
-                                    <a href="{dosen.link_publikasi}" target="_blank">
+                                    <a href={dosen.link_publikasi} target="_blank">
                                         <button className="btn-publications">Lihat Publikasi</button>
                                     </a>
                                     <div className="button-info">
-                                        <Link href="#" className="kinerja-btn">Kinerja <i className="fas fa-arrow-right"></i></Link>
+                                        <a href="#" className="kinerja-btn">Kinerja <i className="fas fa-arrow-right"></i></a>
                                     </div>
                                 </div>
                             </div>

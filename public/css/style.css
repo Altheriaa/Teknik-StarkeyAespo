@@ -2434,14 +2434,30 @@ nav {
   background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23ffffff'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e");
 }
 
+.teknik-accordion .accordion-collapse {
+  display: grid !important;
+  grid-template-rows: 0fr;
+  transition: grid-template-rows 0.3s ease-in-out;
+}
+
+.teknik-accordion .accordion-collapse.show {
+  grid-template-rows: 1fr;
+}
+
 .teknik-accordion .accordion-body {
   background-color: #ffffff;
   color: #333333; /* Forcing text color so it's not white-on-white */
-  padding: 1.25rem 1.5rem;
+  padding: 0 1.5rem;
   font-size: 0.95rem;
   line-height: 1.6;
   opacity: 1 !important;
   visibility: visible !important;
+  overflow: hidden;
+  transition: padding 0.3s ease-in-out;
+}
+
+.teknik-accordion .accordion-collapse.show .accordion-body {
+  padding: 1.25rem 1.5rem;
 }
 
 .teknik-accordion .accordion-body ol {
@@ -4807,11 +4823,36 @@ transform: scale(1.05);
   background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23ffffff'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e");
 }
 
+.bem-accordion .accordion-collapse {
+  display: grid !important;
+  grid-template-rows: 0fr;
+  transition: grid-template-rows 0.3s ease-in-out;
+}
+
+.bem-accordion .accordion-collapse.show {
+  grid-template-rows: 1fr;
+}
+
 .bem-accordion .accordion-body {
   background-color: rgb(235, 239, 227);
-  padding: 1.25rem 1.5rem;
+  padding: 0 1.5rem;
   font-size: 0.95rem;
   line-height: 1.6;
+  color: #333333;
+  opacity: 1 !important;
+  visibility: visible !important;
+  overflow: hidden;
+  transition: padding 0.3s ease-in-out;
+}
+
+.bem-accordion .accordion-collapse.show .accordion-body {
+  padding: 1.25rem 1.5rem;
+}
+
+.bem-accordion .accordion-body ol {
+  list-style-type: decimal;
+  padding-left: 1.5rem;
+  margin-bottom: 0;
 }
 
 .org-maha-image {
@@ -4819,6 +4860,8 @@ transform: scale(1.05);
   max-width: 70%;
   height: auto;
   image-rendering: auto;
+  display: block;
+  margin: 0 auto;
 }
 
 .struktur-bem-ft {
@@ -4853,12 +4896,18 @@ transform: scale(1.05);
     max-width: 120%;
     height: auto;
     image-rendering: auto;
+    display: block;
+    margin: 0 auto;
   }
 
   .bem-accordion .accordion-body {
-    padding: 1.25rem 1.5rem;
+    padding: 0 1.5rem;
     font-size: 0.85rem;
     line-height: 1.6;
+  }
+  
+  .bem-accordion .accordion-collapse.show .accordion-body {
+    padding: 1.25rem 1.5rem;
   }
 }
 
