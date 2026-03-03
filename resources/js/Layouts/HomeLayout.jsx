@@ -63,58 +63,56 @@ export default function HomeLayout({ children }) {
                             </ul>
                         </li>
                         <li><a href="#">Pendidikan</a>
-                        <ul className="submenu_dropdown-nav">
-                                <li><a href="#" className="no-border-hover">Laboratorium</a></li>
-                                <li><a href="#" className="no-border-hover">Beasiswa</a></li>
-                                <li><a href="#" className="no-border-hover">Perpustakaan</a></li>
-                                <li><a href="#" className="no-border-hover">Jurnal</a></li>
+                            <ul className="submenu_dropdown-nav">
+                                <li><Link href="/laboratorium" className="no-border-hover">Laboratorium</Link></li>
+                                <li><Link href="/beasiswa" className="no-border-hover">Beasiswa</Link></li>
+                                <li><Link href="/perpustakaan" className="no-border-hover">Perpustakaan</Link></li>
+                                <li><Link href="/jurnal" className="no-border-hover">Jurnal</Link></li>
                             </ul>
                         </li>
                         <li><a href="#">Kemahasiswaan</a>
                             <ul className="submenu_dropdown-nav">
-                                <li><a href="#" className="no-border-hover">Layanan Komunikasi Orang Tua/Wali
-                                        Mahasiswa</a></li>
-                                <li><a href="#" className="no-border-hover">Layanan Permohonan Surat
-                                        Aktif Kuliah</a></li>
-                                <li><a href="#" className="no-border-hover">Organisasi Mahasiswa</a>
+                                <li><Link href="#" className="no-border-hover">Layanan Komunikasi Orang Tua/Wali
+                                        Mahasiswa</Link></li>
+                                <li><Link href="#" className="no-border-hover">Layanan Permohonan Surat
+                                        Aktif Kuliah</Link></li>
+                                <li><Link href="#" className="no-border-hover">Organisasi Mahasiswa</Link>
                                     <ul className="dropdown-nav">
-                                        <li><a href="#" className="no-border-hover">BEM</a></li>
-                                        <li><a href="#" className="no-border-hover">Himasi</a></li>
-                                        <li><a href="#" className="no-border-hover">Himatesya</a></li>
-                                        <li><a href="#" className="no-border-hover">HMM</a></li>
+                                        <li><Link href="#" className="no-border-hover">BEM</Link></li>
+                                        <li><Link href="#" className="no-border-hover">Himasi</Link></li>
+                                        <li><Link href="#" className="no-border-hover">Himatesya</Link></li>
+                                        <li><Link href="#" className="no-border-hover">HMM</Link></li>
                                     </ul>
                                 </li>
-                                <li><a href="#" className="no-border-hover">Tracer Study</a></li>
-                                <li><a href="#" className="no-border-hover">Engineering Career
-                                        Centre</a></li>
+                                <li><Link href="#" className="no-border-hover">Tracer Study</Link></li>
+                                <li><Link href="#" className="no-border-hover">Engineering Career Centre</Link></li>
                             </ul>
                         </li>
-                        <li><a href="#">Award</a>
+                        <li><Link href="#">Award</Link>
                             <ul className="submenu_dropdown-nav">
-                                <li><a href="#" className="no-border-hover">Penghargaan Dosen</a></li>
-                                <li><a href="#" className="no-border-hover">Penghargaan Mahasiswa</a>
-                                </li>
-                                <li><a href="#" className="no-border-hover">Tingkat Kesiapan <br/>
-                                        Teknologi</a></li>
+                                <li><Link href="#" className="no-border-hover">Penghargaan Dosen</Link></li>
+                                <li><Link href="#" className="no-border-hover">Penghargaan Mahasiswa</Link></li>
+                                <li><Link href="#" className="no-border-hover">Tingkat Kesiapan <br/>
+                                        Teknologi</Link></li>
                             </ul>
                         </li>
-                        <li><a href="{{ route('kerjasama') }}">Kerjasama</a></li>
-                        <li><a href="#">Download</a>
+                        <li><Link href="{{ route('kerjasama') }}">Kerjasama</Link></li>
+                        <li><Link href="#">Download</Link>
                             <ul className="submenu_dropdown-nav">
-                                <li><a href="#" className="no-border-hover">Kegiatan Akademik</a></li>
-                                <li><a href="#" className="no-border-hover">E-Magazine</a></li>
-                                <li><a href="#" className="no-border-hover">Pengurusan Surat</a></li>
-                                <li><a href="#" className="no-border-hover">Dokumen</a></li>
-                                <li><a href="https://drive.google.com/drive/folders/1KO-dTlJQt9lWJoVkNn_BFNZO062cjPwX?usp=sharing"
-                                        className="no-border-hover">Video Intro / Outro Teknik</a></li>
+                                <li><Link href="#" className="no-border-hover">Kegiatan Akademik</Link></li>
+                                <li><Link href="#" className="no-border-hover">E-Magazine</Link></li>
+                                <li><Link href="#" className="no-border-hover">Pengurusan Surat</Link></li>
+                                <li><Link href="#" className="no-border-hover">Dokumen</Link></li>
+                                <li><Link href="https://drive.google.com/drive/folders/1KO-dTlJQt9lWJoVkNn_BFNZO062cjPwX?usp=sharing"
+                                        className="no-border-hover">Video Intro / Outro Teknik</Link></li>
                             </ul>
                         </li>
-                        <li><a href="#">Quality Assurance</a>
+                        <li><Link href="#">Quality Assurance</Link>
                             <ul className="submenu_dropdown-nav">
-                                <li><a href="#" className="no-border-hover">SOP</a></li>
-                                <li><a href="#" className="no-border-hover">Survey</a></li>
-                                <li><a href="#" className="no-border-hover">Dokumen AMI</a></li>
-                                <li><a href="#" className="no-border-hover">Dokumen Monev</a></li>
+                                <li><Link href="#" className="no-border-hover">SOP</Link></li>
+                                <li><Link href="#" className="no-border-hover">Survey</Link></li>
+                                <li><Link href="#" className="no-border-hover">Dokumen AMI</Link></li>
+                                <li><Link href="#" className="no-border-hover">Dokumen Monev</Link></li>
                             </ul>
                         </li>
                     </ul>

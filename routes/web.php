@@ -59,3 +59,25 @@ Route::get('/teknik-mesin/visi', [VisiMisiProdiController::class, 'mesin']);
 Route::get('/teknik-mesin/kurikulum', [KurikulumController::class, 'mesin']);
 // Dosen Teknik Mesin
 Route::get('/teknik-mesin/dosen', [DosenController::class, 'mesin']);
+
+// Pendidikan
+// Laboratorium
+Route::get('/laboratorium', function () {
+    return inertia('Pendidikan/Laboratorium');
+});
+
+// Beasiswa
+Route::get('/beasiswa', function () {
+    return inertia('Pendidikan/Beasiswa');
+});
+
+// Perpustakaan
+Route::get('/perpustakaan', function () {
+    return inertia('Pendidikan/Perpustakaan');
+});
+
+// Jurnal
+Route::get('/jurnal', function () {
+    return inertia('Pendidikan/Jurnal');
+});
+
