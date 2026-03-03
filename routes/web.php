@@ -2,12 +2,13 @@
 
 use Illuminate\Support\Facades\Route;
 
-use App\Http\Controllers\ProductController;
+
 use App\Http\Controllers\AgendaController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\BeritaController;
 use App\Http\Controllers\DosenController;
 use App\Http\Controllers\VisiMisiProdiController;
+use App\Http\Controllers\KurikulumController;
 
 // Route Home
 Route::get('/', [HomeController::class, 'index']);
@@ -41,24 +42,20 @@ Route::get('/berita/{berita:slug}', [BeritaController::class, 'show']);
 // Visi SI
 Route::get('/sistem-informasi/visi', [VisiMisiProdiController::class, 'sistemInformasi']);
 // Kurikulum SI
-Route::get('/sistem-informasi/kurikulum', function () {
-    return inertia('Prodi/SistemInformasi/Kurikulum');
-});
+Route::get('/sistem-informasi/kurikulum', [KurikulumController::class, 'sistemInformasi']);
 // Dosen SI
 Route::get('/sistem-informasi/dosen', [DosenController::class, 'sistemInformasi']);
+
 // Visi Teknik Sipil
 Route::get('/teknik-sipil/visi', [VisiMisiProdiController::class, 'sipil']);
 // Kurikulum Teknik Sipil
-Route::get('/sistem-informasi/kurikulum', function () {
-    return inertia('Prodi/TeknikSipil/Kurikulum');
-});
+Route::get('/teknik-sipil/kurikulum', [KurikulumController::class, 'sipil']);
 // Dosen Teknik Sipil
 Route::get('/teknik-sipil/dosen', [DosenController::class, 'sipil']);
+
 // Visi Teknik Mesin
 Route::get('/teknik-mesin/visi', [VisiMisiProdiController::class, 'mesin']);
 // Kurikulum Teknik Mesin
-Route::get('/teknik-mesin/kurikulum', function () {
-    return inertia('Prodi/TeknikMesin/Kurikulum');
-});
+Route::get('/teknik-mesin/kurikulum', [KurikulumController::class, 'mesin']);
 // Dosen Teknik Mesin
 Route::get('/teknik-mesin/dosen', [DosenController::class, 'mesin']);

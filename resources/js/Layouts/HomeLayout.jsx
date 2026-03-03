@@ -63,7 +63,7 @@ export default function HomeLayout({ children }) {
                             </ul>
                         </li>
                         <li><a href="#">Pendidikan</a>
-                            <ul className="submenu_dropdown-nav">
+                        <ul className="submenu_dropdown-nav">
                                 <li><a href="#" className="no-border-hover">Laboratorium</a></li>
                                 <li><a href="#" className="no-border-hover">Beasiswa</a></li>
                                 <li><a href="#" className="no-border-hover">Perpustakaan</a></li>
