@@ -90,9 +90,9 @@ export default function HomeLayout({ children }) {
                         </li>
                         <li><Link href="#">Award</Link>
                             <ul className="submenu_dropdown-nav">
-                                <li><Link href="#" className="no-border-hover">Penghargaan Dosen</Link></li>
-                                <li><Link href="#" className="no-border-hover">Penghargaan Mahasiswa</Link></li>
-                                <li><Link href="#" className="no-border-hover">Tingkat Kesiapan <br/>
+                                <li><Link href="/penghargaan-dosen" className="no-border-hover">Penghargaan Dosen</Link></li>
+                                <li><Link href="/penghargaan-mahasiswa" className="no-border-hover">Penghargaan Mahasiswa</Link></li>
+                                <li><Link href="/kesiapan-teknologi" className="no-border-hover">Tingkat Kesiapan <br/>
                                         Teknologi</Link></li>
                             </ul>
                         </li>

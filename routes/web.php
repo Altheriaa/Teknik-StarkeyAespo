@@ -7,9 +7,11 @@ use App\Http\Controllers\AgendaController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\BeritaController;
 use App\Http\Controllers\DosenController;
+use App\Http\Controllers\KesiapanTeknologiController;
 use App\Http\Controllers\VisiMisiProdiController;
 use App\Http\Controllers\KurikulumController;
 use App\Http\Controllers\OrganisasiController;
+use App\Http\Controllers\PenghargaanController;
 
 // Route Home
 Route::get('/', [HomeController::class, 'index']);
@@ -113,5 +115,9 @@ Route::get('/engineering-career-centre', function () {
     return inertia('Kemahasiswaan/EngineeringCareerCentre');
 });
 
+// Penghargaan
+Route::get('/penghargaan-dosen', [PenghargaanController::class, 'dosen']);
+Route::get('/penghargaan-mahasiswa', [PenghargaanController::class, 'mahasiswa']);
 
-
+// Tingkat kesiapan Teknologi
+Route::get('/kesiapan-teknologi', [KesiapanTeknologiController::class, 'index']);
