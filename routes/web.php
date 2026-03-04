@@ -7,6 +7,7 @@ use App\Http\Controllers\AgendaController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\BeritaController;
 use App\Http\Controllers\DosenController;
+use App\Http\Controllers\KerjasamaController;
 use App\Http\Controllers\KesiapanTeknologiController;
 use App\Http\Controllers\VisiMisiProdiController;
 use App\Http\Controllers\KurikulumController;
@@ -121,3 +122,6 @@ Route::get('/penghargaan-mahasiswa', [PenghargaanController::class, 'mahasiswa']
 
 // Tingkat kesiapan Teknologi
 Route::get('/kesiapan-teknologi', [KesiapanTeknologiController::class, 'index']);
+
+// Kerjasama
+Route::get('/kerjasama', [KerjasamaController::class, 'index']);

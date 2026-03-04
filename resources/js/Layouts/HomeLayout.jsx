@@ -96,8 +96,8 @@ export default function HomeLayout({ children }) {
                                         Teknologi</Link></li>
                             </ul>
                         </li>
-                        <li><Link href="{{ route('kerjasama') }}">Kerjasama</Link></li>
-                        <li><Link href="#">Download</Link>
+                        <li><Link href="/kerjasama">Kerjasama</Link></li>
+                        <li><Link href="/download">Download</Link>
                             <ul className="submenu_dropdown-nav">
                                 <li><Link href="#" className="no-border-hover">Kegiatan Akademik</Link></li>
                                 <li><Link href="#" className="no-border-hover">E-Magazine</Link></li>
