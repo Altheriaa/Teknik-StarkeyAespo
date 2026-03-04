@@ -30,7 +30,7 @@ class AgendaResource extends Resource
 
     protected static ?string $pluralModelLabel = 'Agenda FT-Unaya';
 
-    protected static ?string $recordTitleAttribute = 'nama_agenda';
+    protected static ?string $recordTitleAttribute = 'judul_agenda';
 
     public static function form(Schema $schema): Schema
     {
@@ -38,7 +38,7 @@ class AgendaResource extends Resource
             ->components([
                 TextInput::make('tahun_agenda')
                     ->numeric(),
-                TextInput::make('nama_agenda'),
+                TextInput::make('judul_agenda'),
                 TextInput::make('masa_agenda'),
                 DatePicker::make('date'),
             ]);
@@ -47,12 +47,12 @@ class AgendaResource extends Resource
     public static function table(Table $table): Table
     {
         return $table
-            ->recordTitleAttribute('nama_agenda')
+            ->recordTitleAttribute('judul_agenda')
             ->columns([
                 TextColumn::make('tahun_agenda')
                     ->label('Tahun Agenda')
                     ->sortable(),
-                TextColumn::make('nama_agenda')
+                TextColumn::make('judul_agenda')
                     ->label('Nama Agenda')
                     ->searchable(),
                 TextColumn::make('masa_agenda')

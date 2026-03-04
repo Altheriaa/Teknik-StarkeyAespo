@@ -471,7 +471,7 @@ export default function Index({ beritas, agendas, pengumumans }) {
                             <div className="event">
                                 <div className="date"><span>{agenda.tahun_agenda}</span></div>
                                 <div className="content">
-                                    <h3 className="event-title">{agenda.nama_agenda}</h3>
+                                    <h3 className="event-title">{agenda.judul_agenda}</h3>
                                     <p className="time">{agenda.masa_agenda}</p>
                                 </div>
                             </div>

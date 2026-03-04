@@ -58,7 +58,7 @@ export default function Index({ agendas }) {
                                         {agenda.tahun_agenda}
                                     </td>
                                     <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500 truncate max-w-xs">
-                                        {agenda.nama_agenda}
+                                        {agenda.judul_agenda}
                                     </td>
                                     <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
                                         {agenda.masa_agenda}

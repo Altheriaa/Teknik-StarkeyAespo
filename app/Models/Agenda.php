@@ -10,7 +10,7 @@ class Agenda extends Model
 
     protected $fillable = [
         'tahun_agenda',
-        'nama_agenda',
+        'judul_agenda',
         'masa_agenda',
         'date',
     ];
