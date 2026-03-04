@@ -38,7 +38,7 @@ export default function Index({ beritas, agendas, pengumumans }) {
                 >
                     {/* First Slide: Video */}
                     <SwiperSlide>
-                        <video className="index-video" autoPlay loop muted style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%', objectFit: 'cover', zIndex: 0 }}>
+                        <video className="index-video" autoPlay loop muted playsInline style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%', objectFit: 'cover', zIndex: 0 }}>
                             <source src="asset/Intro Teknik 1.mp4" type="video/mp4" />
                         </video>
                         <div className="swiper-overlay" style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%', background: 'linear-gradient(to right, rgba(1, 45, 4, 0.7) 0%, rgba(0, 0, 0, 0.3) 100%)', zIndex: 1 }}></div>
@@ -49,19 +49,6 @@ export default function Index({ beritas, agendas, pengumumans }) {
                         </div> */}
                     </SwiperSlide>
 
-                    <SwiperSlide>
-                        <video className="index-video" autoPlay loop muted style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%', objectFit: 'cover', zIndex: 0 }}>
-                            <source src="asset/Intro Teknik 1.mp4" type="video/mp4" />
-                        </video>
-                        <div className="swiper-overlay" style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%', background: 'linear-gradient(to right, rgba(1, 45, 4, 0.7) 0%, rgba(0, 0, 0, 0.3) 100%)', zIndex: 1 }}></div>
-                    </SwiperSlide>
-
-                    <SwiperSlide>
-                        <video className="index-video" autoPlay loop muted style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%', objectFit: 'cover', zIndex: 0 }}>
-                            <source src="asset/Intro Teknik 1.mp4" type="video/mp4" />
-                        </video>
-                        <div className="swiper-overlay" style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%', background: 'linear-gradient(to right, rgba(1, 45, 4, 0.7) 0%, rgba(0, 0, 0, 0.3) 100%)', zIndex: 1 }}></div>
-                    </SwiperSlide>
 
                 </Swiper>
             </div>
@@ -408,7 +395,7 @@ export default function Index({ beritas, agendas, pengumumans }) {
                                 <Link href={`/berita/${berita.slug}`} style={{ textDecoration: 'none' }}>
                                     <div className="post-slide h-100">
                                         <div className="post-img">
-                                            <img src={`/storage/${berita.image_news}`} alt={berita.title} />
+                                            <img src={`/storage/${berita.image_news}`} alt={berita.title} loading="lazy" />
                                             <span className="over-layer"><i className="fa fa-link"></i></span>
                                         </div>
                                         <div className="post-content">
@@ -556,7 +543,7 @@ export default function Index({ beritas, agendas, pengumumans }) {
                         <a href="https://krs.perumahan.pu.go.id/" target="_blank" className="pu-button">Mulai Konsultasi →</a>
                     </div>
                     <div className="pu-image">
-                        <img src="asset\img\swadaya.png" alt="Klinik Rumah Swadaya" />
+                        <img src="asset\img\swadaya.png" alt="Klinik Rumah Swadaya" loading="lazy" />
                     </div>
                 </div>
             </section>
@@ -564,20 +551,20 @@ export default function Index({ beritas, agendas, pengumumans }) {
             <section className="sponsor-logos-section">
                 <div className="logos">
                     <div className="logos-slide">
-                        <img src="asset/img/sponsor/Ban PT.jpg" />
-                        <img src="asset/img/sponsor/Lam Teknikk.jpeg" />
-                        <img src="asset/img/sponsor/Kampus Merdeka.jpg" />
-                        <img src="asset/img/sponsor/Tut Wuri.jpg" />
-                        <img src="asset/img/sponsor/pancacita.png" />
-                        <img src="asset/img/sponsor/Syiah Kuala.png" />
-                        <img src="asset/img/sponsor/UPM.png" />
-                        <img src="asset/img/sponsor/teuku umar.png" />
-                        <img src="asset/img/sponsor/iskandar muda.png" />
-                        <img src="asset/img/sponsor/politeknik negeri lhokseumawe.png" />
-                        <img src="asset/img/sponsor/instutut sains.png" />
-                        <img src="asset/img/sponsor/halu oleo.png" style={{ width: '200px', height: 'auto' }} />
-                        <img src="asset/img/sponsor/bank sampah.png" />
-                        <img src="asset/img/sponsor/Solusi Bangun Indonesia.png" style={{ width: '200px', height: 'auto' }} />
+                        <img src="asset/img/sponsor/Ban PT.jpg" loading="lazy" />
+                        <img src="asset/img/sponsor/Lam Teknikk.jpeg" loading="lazy" />
+                        <img src="asset/img/sponsor/Kampus Merdeka.jpg" loading="lazy" />
+                        <img src="asset/img/sponsor/Tut Wuri.jpg" loading="lazy" />
+                        <img src="asset/img/sponsor/pancacita.png" loading="lazy" />
+                        <img src="asset/img/sponsor/Syiah Kuala.png" loading="lazy" />
+                        <img src="asset/img/sponsor/UPM.png" loading="lazy" />
+                        <img src="asset/img/sponsor/teuku umar.png" loading="lazy" />
+                        <img src="asset/img/sponsor/iskandar muda.png" loading="lazy" />
+                        <img src="asset/img/sponsor/politeknik negeri lhokseumawe.png" loading="lazy" />
+                        <img src="asset/img/sponsor/instutut sains.png" loading="lazy" />
+                        <img src="asset/img/sponsor/halu oleo.png" style={{ width: '200px', height: 'auto' }} loading="lazy" />
+                        <img src="asset/img/sponsor/bank sampah.png" loading="lazy" />
+                        <img src="asset/img/sponsor/Solusi Bangun Indonesia.png" style={{ width: '200px', height: 'auto' }} loading="lazy" />
                     </div>
                 </div>
             </section>

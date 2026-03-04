@@ -11,8 +11,8 @@ class HomeController extends Controller
     public function index() {
 
         $beritas = Berita::orderBy('date', 'desc')->paginate(3);
-        $pengumumans = Pengumuman::orderBy('created_at', 'desc')->get();
-        $agendas = Agenda::orderBy('created_at', 'desc')->get();
+        $pengumumans = Pengumuman::orderBy('created_at', 'desc')->take(4)->get();
+        $agendas = Agenda::orderBy('created_at', 'desc')->take(4)->get();
 
         return inertia('Home/Index', [
             'beritas' => $beritas,
