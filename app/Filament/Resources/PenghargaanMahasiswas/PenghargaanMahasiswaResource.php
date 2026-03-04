@@ -26,6 +26,8 @@ class PenghargaanMahasiswaResource extends Resource
 {
     protected static ?string $model = PenghargaanMahasiswa::class;
 
+    protected static string|BackedEnum|null $navigationIcon = Heroicon::AcademicCap;
+
     protected static string | UnitEnum | null $navigationGroup = 'Manajemen Penghargaan';
 
     protected static ?string $navigationLabel = 'Penghargaan Mahasiswa';

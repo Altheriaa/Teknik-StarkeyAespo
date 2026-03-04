@@ -1,9 +1,9 @@
 <?php
 
-namespace App\Filament\Resources\KegiatanAkademiks;
+namespace App\Filament\Resources\DokumenMonevs;
 
-use App\Filament\Resources\KegiatanAkademiks\Pages\ManageKegiatanAkademiks;
-use App\Models\KegiatanAkademik;
+use App\Filament\Resources\DokumenMonevs\Pages\ManageDokumenMonevs;
+use App\Models\DokumenMonev;
 use BackedEnum;
 use UnitEnum;
 use Filament\Actions\BulkActionGroup;
@@ -12,61 +12,57 @@ use Filament\Actions\DeleteBulkAction;
 use Filament\Actions\EditAction;
 use Filament\Forms\Components\DatePicker;
 use Filament\Forms\Components\TextInput;
-use Filament\Forms\Components\Textarea;
 use Filament\Resources\Resource;
 use Filament\Schemas\Schema;
 use Filament\Support\Icons\Heroicon;
 use Filament\Tables\Columns\TextColumn;
 use Filament\Tables\Table;
 
-class KegiatanAkademikResource extends Resource
+class DokumenMonevResource extends Resource
 {
-    protected static ?string $model = KegiatanAkademik::class;
+    protected static ?string $model = DokumenMonev::class;
 
-    protected static string|BackedEnum|null $navigationIcon = Heroicon::AcademicCap;
+   protected static string|BackedEnum|null $navigationIcon = Heroicon::DocumentText;
 
-    protected static string | UnitEnum | null $navigationGroup = 'Manajemen Download';
+    protected static string | UnitEnum | null $navigationGroup = 'Quality Assurance';
 
-    protected static ?string $navigationLabel = 'Kegiatan Akademik';
+    protected static ?string $navigationLabel = 'Dokumen Monev';
 
-    protected static ?string $pluralModelLabel = 'Kegiatan Akademik';
+    protected static ?string $pluralModelLabel = 'Dokumen Monev';
 
-    protected static ?string $recordTitleAttribute = 'nama_kegiatan';
+    protected static ?string $recordTitleAttribute = 'nama_dokumen';
 
     public static function form(Schema $schema): Schema
     {
         return $schema
             ->components([
-                Textarea::make('nama_kegiatan')
-                    ->label('Nama Kegiatan')
+                TextInput::make('nama_dokumen')
+                    ->label('Nama Dokumen')
                     ->required(),
                 TextInput::make('link')
                     ->label('Link')
                     ->required(),
-                DatePicker::make('tanggal_pelaksanaan')
-                    ->label('Tanggal Pelaksanaan')
-                    ->required(),
+                DatePicker::make('date')
+                    ->label('Tanggal')
+                    ->required()
             ]);
     }
 
     public static function table(Table $table): Table
     {
         return $table
-            ->recordTitleAttribute('nama_kegiatan')
+            ->recordTitleAttribute('nama_dokumen')
             ->columns([
-                TextColumn::make('nama_kegiatan')
-                    ->limit(50)
-                    ->label('Nama Kegiatan')
-                    ->wrap()
+                TextColumn::make('nama_dokumen')
+                    ->label('Nama Dokumen')
                     ->searchable(),
                 TextColumn::make('link')
-                    ->limit(50)
-                    ->wrap()
                     ->label('Link')
                     ->searchable(),
-                TextColumn::make('tanggal_pelaksanaan')
-                    ->label('Tanggal Pelaksanaan')
+                TextColumn::make('date')
+                    ->label('Tanggal Dikerluarkan')
                     ->searchable()
+                    ->sortable(),
             ])
             ->filters([
                 //
@@ -85,7 +81,7 @@ class KegiatanAkademikResource extends Resource
     public static function getPages(): array
     {
         return [
-            'index' => ManageKegiatanAkademiks::route('/'),
+            'index' => ManageDokumenMonevs::route('/'),
         ];
     }
 }

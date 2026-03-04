@@ -23,7 +23,7 @@ class PengumumanResource extends Resource
 {
     protected static ?string $model = Pengumuman::class;
 
-    protected static string|BackedEnum|null $navigationIcon = 'heroicon-o-speaker-wave';
+    protected static string|BackedEnum|null $navigationIcon = Heroicon::SpeakerWave;
 
     protected static string | UnitEnum | null $navigationGroup = 'Manajemen Konten';
 

@@ -16,6 +16,10 @@ use App\Http\Controllers\OrganisasiController;
 use App\Http\Controllers\PenghargaanController;
 use App\Http\Controllers\KegiatanAkademikController;
 use App\Http\Controllers\PengurusanSuratController;
+use App\Http\Controllers\SopController;
+use App\Http\Controllers\SurveyController;
+use App\Http\Controllers\DokumenAmiController;
+use App\Http\Controllers\DokumenMonevController;
 
 // Route Home
 Route::get('/', [HomeController::class, 'index']);
@@ -141,5 +145,18 @@ Route::get('/e-magazine', function () {
 // Pengurusan Surat
 Route::get('/pengurusan-surat', [PengurusanSuratController::class, 'index']);
 
-// Pengurusan Surat
+// Dokumen
 Route::get('/dokumen', [DokumenController::class, 'index']);
+
+// Quatlity Assurance
+// SOP
+Route::get('/sop', [SopController::class, 'index']);
+
+// Survey
+Route::get('/survey', [SurveyController::class, 'index']);
+
+// Dokumen AMI
+Route::get('/dokumen-ami', [DokumenAmiController::class, 'index']);
+
+// Dokumen Monev
+Route::get('/dokumen-monev', [DokumenMonevController::class, 'index']);

@@ -29,7 +29,7 @@ class BeritaResource extends Resource
 {
     protected static ?string $model = Berita::class;
 
-    protected static string|BackedEnum|null $navigationIcon = 'heroicon-o-newspaper';
+    protected static string|BackedEnum|null $navigationIcon = Heroicon::Newspaper;
 
     protected static string | UnitEnum | null $navigationGroup = 'Manajemen Konten';
 

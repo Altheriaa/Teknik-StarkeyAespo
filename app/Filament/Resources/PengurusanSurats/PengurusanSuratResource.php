@@ -22,7 +22,7 @@ class PengurusanSuratResource extends Resource
 {
     protected static ?string $model = PengurusanSurat::class;
 
-    protected static string|BackedEnum|null $navigationIcon = 'heroicon-o-envelope';
+    protected static string|BackedEnum|null $navigationIcon = Heroicon::Envelope;
 
     protected static string | UnitEnum | null $navigationGroup = 'Manajemen Download';
 

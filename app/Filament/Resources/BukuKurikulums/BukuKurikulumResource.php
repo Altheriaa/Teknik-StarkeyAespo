@@ -22,7 +22,7 @@ class BukuKurikulumResource extends Resource
 {
     protected static ?string $model = BukuKurikulum::class;
 
-    protected static string|BackedEnum|null $navigationIcon = 'heroicon-o-book-open';
+    protected static string|BackedEnum|null $navigationIcon = Heroicon::BookOpen;
 
     protected static string | UnitEnum | null $navigationGroup = 'Manajemen Kurikulum';
 

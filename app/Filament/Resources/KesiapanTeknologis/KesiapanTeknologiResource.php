@@ -22,7 +22,7 @@ class KesiapanTeknologiResource extends Resource
 {
     protected static ?string $model = KesiapanTeknologi::class;
 
-    protected static string|BackedEnum|null $navigationIcon = 'heroicon-o-academic-cap';
+    protected static string|BackedEnum|null $navigationIcon = Heroicon::AcademicCap;
 
     protected static string | UnitEnum | null $navigationGroup = 'Manajemen Penghargaan';
 

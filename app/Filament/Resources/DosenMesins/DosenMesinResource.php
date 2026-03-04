@@ -24,8 +24,8 @@ use Filament\Tables\Table;
 class DosenMesinResource extends Resource
 {
     protected static ?string $model = DosenMesin::class;
-    
-    protected static string|BackedEnum|null $navigationIcon = 'heroicon-o-user-group';
+
+    protected static string|BackedEnum|null $navigationIcon = Heroicon::UserGroup;
 
     protected static string | UnitEnum | null $navigationGroup = 'Manajemen Dosen';
 

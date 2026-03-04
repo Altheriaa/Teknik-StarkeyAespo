@@ -22,7 +22,7 @@ class AgendaResource extends Resource
 {
     protected static ?string $model = Agenda::class;
 
-    protected static string|BackedEnum|null $navigationIcon = 'heroicon-o-calendar-days';
+    protected static string|BackedEnum|null $navigationIcon = Heroicon::CalendarDays;
 
     protected static string | UnitEnum | null $navigationGroup = 'Manajemen Konten';
 

@@ -22,7 +22,7 @@ class DokumenResource extends Resource
 {
     protected static ?string $model = Dokumen::class;
 
-    protected static string|BackedEnum|null $navigationIcon = 'heroicon-o-arrow-down-on-square-stack';
+    protected static string|BackedEnum|null $navigationIcon = Heroicon::ArrowDownOnSquareStack;
 
     protected static string | UnitEnum | null $navigationGroup = 'Manajemen Download';
 
