@@ -37,9 +37,7 @@ Route::get('/struktur-organisasi', function () {
     return inertia('Profile/StrukturOrganisasi/Index');
 });
 
-Route::get('/kalender-akademik', function () {
-    return inertia('Profile/KalenderAkademik/Index');
-});
+Route::get('/kalender-akademik', [App\Http\Controllers\KalenderAkademikController::class, 'index']);
 
 Route::get('/roadmap', function () {
     return inertia('Profile/Roadmap/Index');
