@@ -5333,6 +5333,7 @@ DOWNLOAD .download-table-wrapper {
 }
 
 .img-footer {
+  margin-left: 50px;
   width: 75%;
   height: auto;
 }

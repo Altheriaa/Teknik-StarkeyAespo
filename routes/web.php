@@ -158,3 +158,7 @@ Route::get('/dokumen-ami', [DokumenAmiController::class, 'index']);
 
 // Dokumen Monev
 Route::get('/dokumen-monev', [DokumenMonevController::class, 'index']);
+
+Route::get('/inspira', function () {
+    return view('inspira');
+});
