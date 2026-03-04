@@ -6,6 +6,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AgendaController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\BeritaController;
+use App\Http\Controllers\DokumenController;
 use App\Http\Controllers\DosenController;
 use App\Http\Controllers\KerjasamaController;
 use App\Http\Controllers\KesiapanTeknologiController;
@@ -13,6 +14,8 @@ use App\Http\Controllers\VisiMisiProdiController;
 use App\Http\Controllers\KurikulumController;
 use App\Http\Controllers\OrganisasiController;
 use App\Http\Controllers\PenghargaanController;
+use App\Http\Controllers\KegiatanAkademikController;
+use App\Http\Controllers\PengurusanSuratController;
 
 // Route Home
 Route::get('/', [HomeController::class, 'index']);
@@ -125,3 +128,18 @@ Route::get('/kesiapan-teknologi', [KesiapanTeknologiController::class, 'index'])
 
 // Kerjasama
 Route::get('/kerjasama', [KerjasamaController::class, 'index']);
+
+// Download
+// Kerjasama
+Route::get('/kegiatan-akademik', [KegiatanAkademikController::class, 'index']);
+
+// E-Magazine
+Route::get('/e-magazine', function () {
+    return inertia('Download/E-Magazine');
+});
+
+// Pengurusan Surat
+Route::get('/pengurusan-surat', [PengurusanSuratController::class, 'index']);
+
+// Pengurusan Surat
+Route::get('/dokumen', [DokumenController::class, 'index']);

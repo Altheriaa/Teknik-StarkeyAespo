@@ -34,7 +34,7 @@ export default function Kerjasama({ Kerjasamas, filters }) {
         <HomeLayout header="Kerjasama">
             <section className="hero">
                 <div className="container-hero text-center">
-                    <h1 className="display-4 fw-bold fade-in">Kerja Sama Fakultas Teknik</h1>
+                    <h1 className="display-4 fw-bold fade-in">Kerjasama Fakultas Teknik</h1>
                     <p className="lead fade-in">Universitas Abulyatama</p>
                 </div>
             </section>

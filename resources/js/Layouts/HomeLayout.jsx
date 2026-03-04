@@ -97,22 +97,22 @@ export default function HomeLayout({ children }) {
                             </ul>
                         </li>
                         <li><Link href="/kerjasama">Kerjasama</Link></li>
-                        <li><Link href="/download">Download</Link>
+                        <li><Link href="#">Download</Link>
                             <ul className="submenu_dropdown-nav">
-                                <li><Link href="#" className="no-border-hover">Kegiatan Akademik</Link></li>
-                                <li><Link href="#" className="no-border-hover">E-Magazine</Link></li>
-                                <li><Link href="#" className="no-border-hover">Pengurusan Surat</Link></li>
-                                <li><Link href="#" className="no-border-hover">Dokumen</Link></li>
-                                <li><Link href="https://drive.google.com/drive/folders/1KO-dTlJQt9lWJoVkNn_BFNZO062cjPwX?usp=sharing"
-                                        className="no-border-hover">Video Intro / Outro Teknik</Link></li>
+                                <li><Link href="/kegiatan-akademik" className="no-border-hover">Kegiatan Akademik</Link></li>
+                                <li><Link href="/e-magazine" className="no-border-hover">E-Magazine</Link></li>
+                                <li><Link href="/pengurusan-surat" className="no-border-hover">Pengurusan Surat</Link></li>
+                                <li><Link href="/dokumen" className="no-border-hover">Dokumen</Link></li>
+                                <li><a href="https://drive.google.com/drive/folders/1KO-dTlJQt9lWJoVkNn_BFNZO062cjPwX?usp=sharing"
+                                        className="no-border-hover">Video Intro / Outro Teknik</a></li>
                             </ul>
                         </li>
                         <li><Link href="#">Quality Assurance</Link>
                             <ul className="submenu_dropdown-nav">
-                                <li><Link href="#" className="no-border-hover">SOP</Link></li>
-                                <li><Link href="#" className="no-border-hover">Survey</Link></li>
-                                <li><Link href="#" className="no-border-hover">Dokumen AMI</Link></li>
-                                <li><Link href="#" className="no-border-hover">Dokumen Monev</Link></li>
+                                <li><Link href="/sop" className="no-border-hover">SOP</Link></li>
+                                <li><Link href="/survey" className="no-border-hover">Survey</Link></li>
+                                <li><Link href="/dokumen-ami" className="no-border-hover">Dokumen AMI</Link></li>
+                                <li><Link href="/dokumen-monev" className="no-border-hover">Dokumen Monev</Link></li>
                             </ul>
                         </li>
                     </ul>
