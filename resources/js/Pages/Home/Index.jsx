@@ -390,7 +390,7 @@ export default function Index({ beritas, agendas, pengumumans }) {
                 <p className="desc-fluid-news">Informasi Terbaru Fakultas Teknik</p>
                 <div style={{ maxWidth: '167px', position: 'relative', fontSize: '16px', color: '#ffffff', textAlign: 'center', borderRadius: '5px', marginTop: '-5px' }}
                     className="badge-lainnya bg-gradient-primary-to-secondary text-white">
-                    <a style={{ textDecoration: 'none', color: 'white' }} href="/berita">Lihat Berita Lainnya</a>
+                    <Link style={{ textDecoration: 'none', color: 'white' }} href="/berita">Lihat Berita Lainnya</Link>
                 </div>
                 <div className="col-md-12">
                     <Swiper
