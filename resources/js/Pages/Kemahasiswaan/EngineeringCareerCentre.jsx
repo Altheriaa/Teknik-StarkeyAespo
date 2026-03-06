@@ -21,7 +21,7 @@ export default function EngineeringCareerCentre({}) {
                         {/* {{-- deskripsi singkat --}} */}
                         <div className="desc-singkat col-md-6">
                             {/* <!-- Judul Kecil --> */}
-                            <h3 className="si-small-title text-left">Profilee Career Center</h3>
+                            <h3 className="si-small-title text-left">Profile Career Center</h3>
 
                             {/* <!-- Deskripsi Departemen --> */}
                             <h2 className="si-section-title py-1 mb-4">Fakultas Teknik Universitas Abulyatama
