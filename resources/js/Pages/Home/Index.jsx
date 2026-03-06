@@ -42,11 +42,6 @@ export default function Index({ beritas, agendas, pengumumans }) {
                             <source src="asset/Intro Teknik 1.mp4" type="video/mp4" />
                         </video>
                         <div className="swiper-overlay" style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%', background: 'linear-gradient(to right, rgba(1, 45, 4, 0.7) 0%, rgba(0, 0, 0, 0.3) 100%)', zIndex: 1 }}></div>
-                        {/* <div className="slide-content">
-                            <h1>Fakultas Teknik Unaya</h1>
-                            <p>Mencetak generasi insinyur unggul, inovatif, dan berakhlak mulia untuk tantangan masa depan revolusi industri 5.0.</p>
-                            <a href="#about" className="btn-hero">Jelajahi Sekarang</a>
-                        </div> */}
                     </SwiperSlide>
 
 
