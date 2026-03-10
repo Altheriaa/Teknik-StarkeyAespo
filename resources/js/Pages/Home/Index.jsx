@@ -48,19 +48,6 @@ export default function Index({ beritas, agendas, pengumumans }) {
                             zIndex: 1 }}
                         ></div> */}
                     </SwiperSlide>
-                    <SwiperSlide>
-                        <video className="index-video" autoPlay loop muted playsInline style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%', objectFit: 'cover', zIndex: 0 }}>
-                            <source src="asset/Intro Teknik 1.mp4" type="video/mp4" />
-                        </video>
-                        {/* <div className="swiper-overlay" style={{ 
-                            position: 'absolute', 
-                            top: 0, left: 0, width: '100%', height: '100%', 
-                            background: 'linear-gradient(to right, rgba(1, 45, 4, 0.7) 0%, rgba(0, 0, 0, 0.3) 100%)', 
-                            zIndex: 1 }}
-                        ></div> */}
-                    </SwiperSlide>
-
-
                 </Swiper>
             </div>
 
