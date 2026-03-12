@@ -5396,44 +5396,47 @@ DOWNLOAD .download-table-wrapper {
 }
 
 .visitor-pill {
-    background-color: rgba(97, 123, 98, 0.9); /* Olive green with transparency */
-    backdrop-filter: blur(8px); /* Added blur effect */
+    background-color: rgba(25, 30, 36, 0.85); /* Dark base with transparency */
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
     color: white;
     border-radius: 40px;
-    padding: 6px 12px 6px 6px; /* Reduced padding */
+    padding: 6px 16px 6px 6px; 
     display: flex;
     align-items: center;
     cursor: pointer;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
     transition: all 0.3s ease;
-    border: 1px solid rgba(255,255,255,0.1);
+    border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .visitor-icon-box {
-    background-color: white;
-    color: #aebdb0;
-    width: 32px; /* Smaller icon box */
-    height: 32px; /* Smaller icon box */
-    border-radius: 10px;
+    background: linear-gradient(135deg, #FFD700 0%, #F8B400 100%);
+    color: #1a1a1a;
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 0.95rem; /* Smaller icon */
+    font-size: 1.1rem;
+    box-shadow: 0 4px 15px rgba(255, 215, 0, 0.3);
 }
 
 .visitor-text h6 {
-    font-size: 0.95rem; /* Smaller text */
+    font-size: 1rem;
+    color: #ffffff;
 }
 
 .visitor-text small {
-    font-size: 0.75rem; /* Smaller text */
-    opacity: 0.9;
+    font-size: 0.75rem;
+    color: rgba(255, 255, 255, 0.7);
 }
 
 .visitor-chevron {
     transition: transform 0.3s ease;
     font-size: 0.9rem;
-    opacity: 0.8;
+    color: rgba(255, 255, 255, 0.6);
 }
 
 .visitor-chevron.rotate {
@@ -5443,20 +5446,21 @@ DOWNLOAD .download-table-wrapper {
 /* Hover Menu */
 .visitor-popover {
     position: absolute;
-    bottom: 52px; /* Adjusted height */
-    right: 1px; /* Aligned to the right instead of left */
-    background-color: white;
-    color: #333;
+    bottom: 60px;
+    right: 0;
+    background-color: rgba(25, 30, 36, 0.95);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    color: #ffffff;
     border-radius: 20px;
-    border: 1px solid #e0e0e0;
-    width: 190px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    width: 220px;
     padding: 15px 0;
-    box-shadow: 0 -5px 25px rgba(0,0,0,0.1);
+    box-shadow: 0 -5px 25px rgba(0, 0, 0, 0.3);
     opacity: 0;
     visibility: hidden;
     transform: translateY(10px);
     transition: all 0.3s ease;
-    /* This z-index sits slightly below the pill for overlap effect */
     z-index: -1;
 }
 
@@ -5476,20 +5480,20 @@ DOWNLOAD .download-table-wrapper {
     justify-content: space-between;
     padding: 10px 25px;
     transition: background-color 0.2s ease;
-    font-size: 0.8rem;
+    font-size: 0.85rem;
 }
 
 .visitor-row:hover {
-    background-color: #f9f9f9;
+    background-color: rgba(255, 255, 255, 0.05);
 }
 
 .visitor-row .v-label {
-    color: #444;
+    color: rgba(255, 255, 255, 0.7);
 }
 
 .visitor-row .v-value {
-    font-weight: 800;
-    color: #222;
+    font-weight: 700;
+    color: #FFD700;
 }
 
 @media (max-width: 768px) {

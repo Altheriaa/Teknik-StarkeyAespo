@@ -285,8 +285,8 @@ export default function HomeLayout({ children }) {
                     </div>
                     
                     <div className="visitor-pill shadow-sm">
-                        <div className="visitor-icon-box">
-                            <i className="fas fa-chart-bar"></i>
+                        <div className="visitor-icon-box shadow-sm">
+                            <i className="fa-solid fa-chart-line"></i>
                         </div>
                         <div className="visitor-text ms-3">
                             <h6 className="mb-0 fw-bold">Kunjungan</h6>
