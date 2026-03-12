@@ -20,6 +20,8 @@ use App\Http\Controllers\SopController;
 use App\Http\Controllers\SurveyController;
 use App\Http\Controllers\DokumenAmiController;
 use App\Http\Controllers\DokumenMonevController;
+use App\Http\Controllers\CareerController;
+use App\Http\Controllers\FlyerController;
 
 // Route Home
 Route::get('/', [HomeController::class, 'index']);
@@ -117,9 +119,10 @@ Route::get('/tracer-study', function () {
 });
 
 // Engineering Career Centre
-Route::get('/engineering-career-centre', function () {
-    return inertia('Kemahasiswaan/EngineeringCareerCentre');
-});
+Route::get('/engineering-career-centre', [CareerController::class, 'index']);
+
+// Flyer Ketenaga Kerja
+Route::get('/flyer-ketenaga-kerja', [FlyerController::class, 'index']);
 
 // Penghargaan
 Route::get('/penghargaan-dosen', [PenghargaanController::class, 'dosen']);
