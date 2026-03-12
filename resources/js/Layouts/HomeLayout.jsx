@@ -151,7 +151,7 @@ export default function HomeLayout({ children }) {
 
                     {activeMenu === "profile" && (
                         <ul className="menu-slide">
-                            <li onClick={() => showMenu("main")}>← Back</li>
+                            <li className="back-button-nav" onClick={() => showMenu("main")}><i className="fa-solid fa-chevron-left me-2"></i> KEMBALI</li>
                             <li><Link href="/sejarah">Sejarah</Link></li>
                             <li><Link href="/visi-misi">Visi & Misi</Link></li>
                             <li><Link href="/struktur-organisasi">Struktur Organisasi</Link></li>
@@ -162,7 +162,7 @@ export default function HomeLayout({ children }) {
 
                     {activeMenu === "program_studi" && (
                         <ul className="menu-slide">
-                            <li onClick={() => showMenu("main")}>← Back</li>
+                            <li className="back-button-nav" onClick={() => showMenu("main")}><i className="fa-solid fa-chevron-left me-2"></i> KEMBALI</li>
                             <li onClick={() => showMenu("prodi_si")}>Sistem Informasi</li>
                             <li onClick={() => showMenu("prodi_ts")}>Teknik Sipil</li>
                             <li onClick={() => showMenu("prodi_tm")}>Teknik Mesin</li>
@@ -171,89 +171,89 @@ export default function HomeLayout({ children }) {
 
                     {activeMenu === "prodi_si" && (
                         <ul className="menu-slide">
-                            <li onClick={() => showMenu("program_studi")}>← Back</li>
-                            <li><a href="#">Visi</a></li>
-                            <li><a href="#">Dosen</a></li>
-                            <li><a href="#">Kurikulum</a></li>
+                            <li className="back-button-nav" onClick={() => showMenu("program_studi")}><i className="fa-solid fa-chevron-left me-2"></i> KEMBALI</li>
+                            <li><Link href="/sistem-informasi/visi">Visi</Link></li>
+                            <li><Link href="/sistem-informasi/dosen">Dosen</Link></li>
+                            <li><Link href="/sistem-informasi/kurikulum">Kurikulum</Link></li>
                         </ul>
                     )}
 
                     {activeMenu === "prodi_ts" && (
                         <ul className="menu-slide">
-                            <li onClick={() => showMenu("program_studi")}>← Back</li>
-                            <li><a href="#">Visi</a></li>
-                            <li><a href="#">Dosen</a></li>
-                            <li><a href="#">Kurikulum</a></li>
+                            <li className="back-button-nav" onClick={() => showMenu("program_studi")}><i className="fa-solid fa-chevron-left me-2"></i> KEMBALI</li>
+                            <li><Link href="/teknik-sipil/visi">Visi</Link></li>
+                            <li><Link href="/teknik-sipil/dosen">Dosen</Link></li>
+                            <li><Link href="/teknik-sipil/kurikulum">Kurikulum</Link></li>
                         </ul>
                     )}
 
                     {activeMenu === "prodi_tm" && (
                         <ul className="menu-slide">
-                            <li onClick={() => showMenu("program_studi")}>← Back</li>
-                            <li><a href="#">Visi</a></li>
-                            <li><a href="#">Dosen</a></li>
-                            <li><a href="#">Kurikulum</a></li>
+                            <li className="back-button-nav" onClick={() => showMenu("program_studi")}><i className="fa-solid fa-chevron-left me-2"></i> KEMBALI</li>
+                            <li><Link href="/teknik-mesin/visi">Visi</Link></li>
+                            <li><Link href="/teknik-mesin/dosen">Dosen</Link></li>
+                            <li><Link href="/teknik-mesin/kurikulum">Kurikulum</Link></li>
                         </ul>
                     )}
 
                     {activeMenu === "pendidikan" && (
                         <ul className="menu-slide">
-                            <li onClick={() => showMenu("main")}>← Back</li>
-                            <li><a href="#">Laboratorium</a></li>
-                            <li><a href="#">Beasiswa</a></li>
-                            <li><a href="#">Perpustakaan</a></li>
-                            <li><a href="#">Jurnal</a></li>
+                            <li className="back-button-nav" onClick={() => showMenu("main")}><i className="fa-solid fa-chevron-left me-2"></i> KEMBALI</li>
+                            <li><Link href="/laboratorium">Laboratorium</Link></li>
+                            <li><Link href="/beasiswa">Beasiswa</Link></li>
+                            <li><Link href="/perpustakaan">Perpustakaan</Link></li>
+                            <li><Link href="/jurnal">Jurnal</Link></li>
                         </ul>
                     )}
 
                     {activeMenu === "kemahasiswaan" && (
                         <ul className="menu-slide">
-                            <li onClick={() => showMenu("main")}>← Back</li>
-                            <li><a href="#">Layanan Komunikasi Orang Tua/Wali Mahasiswa</a></li>
-                            <li><a href="#">Layanan Permohonan Surat Aktif Kuliah</a></li>
+                            <li className="back-button-nav" onClick={() => showMenu("main")}><i className="fa-solid fa-chevron-left me-2"></i> KEMBALI</li>
+                            <li><Link href="/layanan-komunikasi">Layanan Komunikasi Orang Tua/Wali Mahasiswa</Link></li>
+                            <li><Link href="/layanan-surat-aktif">Layanan Permohonan Surat Aktif Kuliah</Link></li>
                             <li onClick={() => showMenu("organisasi_mahasiswa")}>Organisasi Mahasiswa</li>
-                            <li><a href="#">Tracer Study</a></li>
-                            <li><a href="#">Engineering Career Centre</a></li>
+                            <li><Link href="/tracer-study">Tracer Study</Link></li>
+                            <li><Link href="/engineering-career-centre">Engineering Career Centre</Link></li>
                         </ul>
                     )}
 
                     {activeMenu === "organisasi_mahasiswa" && (
                         <ul className="menu-slide">
-                            <li onClick={() => showMenu("kemahasiswaan")}>← Back</li>
-                            <li><a href="#">BEM</a></li>
-                            <li><a href="#">Himasi</a></li>
-                            <li><a href="#">Himatesya</a></li>
-                            <li><a href="#">HMM</a></li>
+                            <li className="back-button-nav" onClick={() => showMenu("kemahasiswaan")}><i className="fa-solid fa-chevron-left me-2"></i> KEMBALI</li>
+                            <li><Link href="/bem">BEM</Link></li>
+                            <li><Link href="/himasi">Himasi</Link></li>
+                            <li><Link href="/himatesya">Himatesya</Link></li>
+                            <li><Link href="/hmm">HMM</Link></li>
                         </ul>
                     )}
 
                     {activeMenu === "award" && (
                         <ul className="menu-slide">
-                            <li onClick={() => showMenu("main")}>← Back</li>
-                            <li><a href="#">Penghargaan Dosen</a></li>
-                            <li><a href="#">Penghargaan Mahasiswa</a></li>
-                            <li><a href="#">Tingkat Kesiapan Teknologi</a></li>
+                            <li className="back-button-nav" onClick={() => showMenu("main")}><i className="fa-solid fa-chevron-left me-2"></i> KEMBALI</li>
+                            <li><Link href="/penghargaan-dosen">Penghargaan Dosen</Link></li>
+                            <li><Link href="/penghargaan-mahasiswa">Penghargaan Mahasiswa</Link></li>
+                            <li><Link href="/kesiapan-teknologi">Tingkat Kesiapan Teknologi</Link></li>
                         </ul>
                     )}
 
                     {activeMenu === "download" && (
                         <ul className="menu-slide">
-                            <li onClick={() => showMenu("main")}>← Back</li>
-                            <li><a href="#">Kegiatan Akademik</a></li>
-                            <li><a href="#">E-Magazine</a></li>
-                            <li><a href="#">Pengurusan Surat</a></li>
-                            <li><a href="#">Dokumen</a></li>
+                            <li className="back-button-nav" onClick={() => showMenu("main")}><i className="fa-solid fa-chevron-left me-2"></i> KEMBALI</li>
+                            <li><Link href="/kegiatan-akademik">Kegiatan Akademik</Link></li>
+                            <li><Link href="/e-magazine">E-Magazine</Link></li>
+                            <li><Link href="/pengurusan-surat">Pengurusan Surat</Link></li>
+                            <li><Link href="/dokumen">Dokumen</Link></li>
                             <li><a href="https://drive.google.com/drive/folders/1KO-dTlJQt9lWJoVkNn_BFNZO062cjPwX?usp=sharing">Video Intro / Outro Teknik</a></li>
                         </ul>
                     )}
 
                     {activeMenu === "quality_assurance" && (
                         <ul className="menu-slide">
-                            <li onClick={() => showMenu("main")}>← Back</li>
-                            <li><a href="#">SOP</a></li>
-                            <li><a href="#">Survey</a></li>
-                            <li><a href="#">Dokumen AMI</a></li>
-                            <li><a href="#">Dokumen Monev</a></li>
+                            <li className="back-button-nav" onClick={() => showMenu("main")}><i className="fa-solid fa-chevron-left me-2"></i> KEMBALI</li>
+                            <li><Link href="/sop">SOP</Link></li>
+                            <li><Link href="/survey">Survey</Link></li>
+                            <li><Link href="/dokumen-ami">Dokumen AMI</Link></li>
+                            <li><Link href="/dokumen-monev">Dokumen Monev</Link></li>
                         </ul>
                     )}
                 </div>
