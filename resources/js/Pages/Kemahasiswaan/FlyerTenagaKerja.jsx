@@ -111,27 +111,61 @@ export default function FlyerTenagaKerja({ flyers }) {
             {/* Modal for Details */}
             {showModal && selectedFlyer && (
                 <>
-                    <div className="modal fade show d-block" tabIndex="-1" style={{ backgroundColor: 'rgba(0,0,0,0.6)', zIndex: 1050, overflowY: 'auto' }}>
-                        <div className="modal-dialog modal-dialog-centered modal-lg modal-dialog-scrollable">
+                    <div className="modal fade show d-block" tabIndex="-1" style={{ backgroundColor: 'rgba(0,0,0,0.8)', zIndex: 1050, overflowY: 'auto' }}>
+                        {/* 1. UBAH modal-lg MENJADI modal-xl AGAR LEBIH LEBAR */}
+                        <div className="modal-dialog modal-dialog-centered modal-xl"> 
                             <div className="modal-content overflow-hidden shadow-lg" style={{ borderRadius: '15px', border: 'none' }}>
-                                <div className="modal-header border-0 p-0" style={{ position: 'absolute', top: '10px', right: '10px', zIndex: 10 }}>
-                                    <button type="button" className="btn-close bg-white rounded-circle shadow-sm p-2" onClick={handleCloseModal} aria-label="Close" style={{ opacity: 0.9 }}></button>
-                                </div>
-                                <div className="modal-body p-0 d-flex flex-column flex-md-row">
-                                    <div className="col-md-5 bg-light d-flex align-items-center justify-content-center p-0" style={{ minHeight: '300px' }}>
-                                        <img 
-                                            src={`/storage/${selectedFlyer.gambar}`} 
-                                            alt={selectedFlyer.judul} 
-                                            className="img-fluid" 
-                                            style={{ width: '100%', height: '100%', objectFit: 'cover', maxHeight: '100vh' }} 
-                                        />
-                                    </div>
-                                    <div className="col-md-7 p-4 p-md-5 d-flex flex-column" style={{ maxHeight: '80vh', overflowY: 'auto' }}>
-                                        <div 
-                                            className="rich-text-description"
-                                            style={{ color: '#4A4A4A', fontSize: '1rem', textAlign: 'left' }}
-                                            dangerouslySetInnerHTML={{ __html: selectedFlyer.deskripsi }}
-                                        />
+                                
+                                {/* Tombol Close */}
+                                <button 
+                                    type="button" 
+                                    className="btn-close bg-white rounded-circle shadow p-2" 
+                                    onClick={handleCloseModal} 
+                                    style={{ position: 'absolute', top: '15px', right: '15px', zIndex: 20, opacity: 0.9 }}
+                                ></button>
+
+                                <div className="modal-body p-0">
+                                    {/* 2. UBAH TINGGI MENJADI 85vh DAN BAGI KOLOM 50/50 (col-md-6) */}
+                                    <div className="d-flex flex-column flex-md-row" style={{ minHeight: '600px', height: '85vh' }}>
+                                        
+                                        {/* SISI KIRI: GAMBAR (LEBIH LEBAR - col-md-6) */}
+                                        <div className="col-md-6 p-0 bg-dark d-flex align-items-center justify-content-center border-end">
+                                            <img 
+                                                src={`/storage/${selectedFlyer.gambar}`} 
+                                                alt={selectedFlyer.judul} 
+                                                style={{ 
+                                                    width: '100%', 
+                                                    height: '100%', 
+                                                    objectFit: 'contain', 
+                                                    backgroundColor: '#111',
+                                                    cursor: 'zoom-in' 
+                                                }} 
+                                                onClick={() => window.open(`/storage/${selectedFlyer.gambar}`, '_blank')}
+                                                title="Klik untuk memperbesar di tab baru"
+                                            />
+                                        </div>
+
+                                        {/* SISI KANAN: TEKS (col-md-6) */}
+                                        <div className="col-md-6 p-4 p-md-5 bg-white overflow-auto">
+                                            <div className="mt-2">
+                                                <h2 className="fw-bold mb-3" style={{ color: '#1B263B', lineHeight: '1.2' }}>
+                                                    {selectedFlyer.judul}
+                                                </h2>
+                                                <div className="mb-4" style={{ width: '60px', height: '4px', backgroundColor: '#FFC107' }}></div>
+                                                
+                                                <div 
+                                                    className="rich-text-description"
+                                                    style={{ 
+                                                        color: '#333', 
+                                                        fontSize: '1rem', 
+                                                        textAlign: 'left',
+                                                        lineHeight: '1.7' 
+                                                    }}
+                                                    dangerouslySetInnerHTML={{ __html: selectedFlyer.deskripsi }}
+                                                />
+                                            </div>
+                                        </div>
+
                                     </div>
                                 </div>
                             </div>
