@@ -127,14 +127,11 @@ export default function FlyerTenagaKerja({ flyers }) {
                                         />
                                     </div>
                                     <div className="col-md-7 p-4 p-md-5 d-flex flex-column" style={{ maxHeight: '80vh', overflowY: 'auto' }}>
-                                        <div className="mt-3 mt-md-0">
-                                            <h3 className="fw-bold mb-3" style={{ color: '#1B263B', lineHeight: '1.3' }}>{selectedFlyer.judul}</h3>
-                                            <div className="mb-4" style={{ width: '50px', height: '3px', backgroundColor: '#FFC107' }}></div>
-                                            <h6 className="fw-bold text-success mb-3">Deskripsi Pekerjaan:</h6>
-                                            <p className="text-muted" style={{ whiteSpace: 'pre-wrap', lineHeight: '1.8', fontSize: '0.95rem' }}>
-                                                {selectedFlyer.deskripsi.replace(/(<([^>]+)>)/gi, "")}
-                                            </p>
-                                        </div>
+                                        <div 
+                                            className="rich-text-description"
+                                            style={{ color: '#4A4A4A', fontSize: '1rem', textAlign: 'left' }}
+                                            dangerouslySetInnerHTML={{ __html: selectedFlyer.deskripsi }}
+                                        />
                                     </div>
                                 </div>
                             </div>

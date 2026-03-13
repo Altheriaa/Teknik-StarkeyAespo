@@ -4912,6 +4912,28 @@ transform: scale(1.05);
   }
 }
 
+/* Engineering Centre */
+/* Menampilkan kembali bullet points dan padding pada konten dari editor */
+.rich-text-description ul {
+    list-style-type: disc !important;
+    padding-left: 1.5rem !important;
+    margin-bottom: 1rem;
+}
+
+.rich-text-description ol {
+    list-style-type: decimal !important;
+    padding-left: 1.5rem !important;
+    margin-bottom: 1rem;
+}
+
+.rich-text-description li {
+    margin-bottom: 0.5rem;
+}
+
+.rich-text-description p {
+    margin-bottom: 1rem;
+}
+
 /* kerjasama.php */
 .body-kerjasama {
   background-image: url("https://www.transparenttextures.com/patterns/back-pattern.png");
