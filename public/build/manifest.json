@@ -1,6 +1,6 @@
 {
-  "_HomeLayout-DNUiA75h.js": {
-    "file": "assets/HomeLayout-DNUiA75h.js",
+  "_HomeLayout-CQz94X6b.js": {
+    "file": "assets/HomeLayout-CQz94X6b.js",
     "name": "HomeLayout",
     "imports": [
       "resources/js/app.jsx"
@@ -16,130 +16,130 @@
     ]
   },
   "resources/js/Pages/Award/KesiapanTeknologi.jsx": {
-    "file": "assets/KesiapanTeknologi-CBci8BtA.js",
+    "file": "assets/KesiapanTeknologi-27PPB169.js",
     "name": "KesiapanTeknologi",
     "src": "resources/js/Pages/Award/KesiapanTeknologi.jsx",
     "isDynamicEntry": true,
     "imports": [
       "resources/js/app.jsx",
-      "_HomeLayout-DNUiA75h.js"
+      "_HomeLayout-CQz94X6b.js"
     ],
     "css": [
       "assets/app-Dl7Ru51g.css"
     ]
   },
   "resources/js/Pages/Award/PenghargaanDosen.jsx": {
-    "file": "assets/PenghargaanDosen-DCbWOyQQ.js",
+    "file": "assets/PenghargaanDosen-BUTqBe5b.js",
     "name": "PenghargaanDosen",
     "src": "resources/js/Pages/Award/PenghargaanDosen.jsx",
     "isDynamicEntry": true,
     "imports": [
       "resources/js/app.jsx",
-      "_HomeLayout-DNUiA75h.js"
+      "_HomeLayout-CQz94X6b.js"
     ],
     "css": [
       "assets/app-Dl7Ru51g.css"
     ]
   },
   "resources/js/Pages/Award/PenghargaanMahasiswa.jsx": {
-    "file": "assets/PenghargaanMahasiswa-BEiL89yO.js",
+    "file": "assets/PenghargaanMahasiswa-8ADMOfxZ.js",
     "name": "PenghargaanMahasiswa",
     "src": "resources/js/Pages/Award/PenghargaanMahasiswa.jsx",
     "isDynamicEntry": true,
     "imports": [
       "resources/js/app.jsx",
-      "_HomeLayout-DNUiA75h.js"
+      "_HomeLayout-CQz94X6b.js"
     ],
     "css": [
       "assets/app-Dl7Ru51g.css"
     ]
   },
   "resources/js/Pages/Berita/Index.jsx": {
-    "file": "assets/Index-BlZsPL_0.js",
+    "file": "assets/Index-C8qKBQ95.js",
     "name": "Index",
     "src": "resources/js/Pages/Berita/Index.jsx",
     "isDynamicEntry": true,
     "imports": [
       "resources/js/app.jsx",
-      "_HomeLayout-DNUiA75h.js"
+      "_HomeLayout-CQz94X6b.js"
     ],
     "css": [
       "assets/app-Dl7Ru51g.css"
     ]
   },
   "resources/js/Pages/Berita/Show.jsx": {
-    "file": "assets/Show-DZz5A0Ke.js",
+    "file": "assets/Show-BPfGWvKr.js",
     "name": "Show",
     "src": "resources/js/Pages/Berita/Show.jsx",
     "isDynamicEntry": true,
     "imports": [
       "resources/js/app.jsx",
-      "_HomeLayout-DNUiA75h.js"
+      "_HomeLayout-CQz94X6b.js"
     ],
     "css": [
       "assets/app-Dl7Ru51g.css"
     ]
   },
   "resources/js/Pages/Download/Dokumen.jsx": {
-    "file": "assets/Dokumen-CD4JwTgX.js",
+    "file": "assets/Dokumen-BGdKVYXO.js",
     "name": "Dokumen",
     "src": "resources/js/Pages/Download/Dokumen.jsx",
     "isDynamicEntry": true,
     "imports": [
       "resources/js/app.jsx",
-      "_HomeLayout-DNUiA75h.js"
+      "_HomeLayout-CQz94X6b.js"
     ],
     "css": [
       "assets/app-Dl7Ru51g.css"
     ]
   },
   "resources/js/Pages/Download/E-Magazine.jsx": {
-    "file": "assets/E-Magazine-BTA87XFm.js",
+    "file": "assets/E-Magazine-DvoR4Qhp.js",
     "name": "E-Magazine",
     "src": "resources/js/Pages/Download/E-Magazine.jsx",
     "isDynamicEntry": true,
     "imports": [
       "resources/js/app.jsx",
-      "_HomeLayout-DNUiA75h.js"
+      "_HomeLayout-CQz94X6b.js"
     ],
     "css": [
       "assets/app-Dl7Ru51g.css"
     ]
   },
   "resources/js/Pages/Download/KegiatanAkademik.jsx": {
-    "file": "assets/KegiatanAkademik-BtNtnhMs.js",
+    "file": "assets/KegiatanAkademik-DHeLe1dB.js",
     "name": "KegiatanAkademik",
     "src": "resources/js/Pages/Download/KegiatanAkademik.jsx",
     "isDynamicEntry": true,
     "imports": [
       "resources/js/app.jsx",
-      "_HomeLayout-DNUiA75h.js"
+      "_HomeLayout-CQz94X6b.js"
     ],
     "css": [
       "assets/app-Dl7Ru51g.css"
     ]
   },
   "resources/js/Pages/Download/PengurusanSurat.jsx": {
-    "file": "assets/PengurusanSurat-HBO0_wRF.js",
+    "file": "assets/PengurusanSurat-BlJARgK0.js",
     "name": "PengurusanSurat",
     "src": "resources/js/Pages/Download/PengurusanSurat.jsx",
     "isDynamicEntry": true,
     "imports": [
       "resources/js/app.jsx",
-      "_HomeLayout-DNUiA75h.js"
+      "_HomeLayout-CQz94X6b.js"
     ],
     "css": [
       "assets/app-Dl7Ru51g.css"
     ]
   },
   "resources/js/Pages/Home/Index.jsx": {
-    "file": "assets/Index-DEVFOr8y.js",
+    "file": "assets/Index-54nr8M7u.js",
     "name": "Index",
     "src": "resources/js/Pages/Home/Index.jsx",
     "isDynamicEntry": true,
     "imports": [
       "resources/js/app.jsx",
-      "_HomeLayout-DNUiA75h.js"
+      "_HomeLayout-CQz94X6b.js"
     ],
     "css": [
       "assets/Index-DK1bY9WB.css",
@@ -147,423 +147,423 @@
     ]
   },
   "resources/js/Pages/Kemahasiswaan/EngineeringCareerCentre.jsx": {
-    "file": "assets/EngineeringCareerCentre-vmbpolsM.js",
+    "file": "assets/EngineeringCareerCentre-Bopjbtqo.js",
     "name": "EngineeringCareerCentre",
     "src": "resources/js/Pages/Kemahasiswaan/EngineeringCareerCentre.jsx",
     "isDynamicEntry": true,
     "imports": [
       "resources/js/app.jsx",
-      "_HomeLayout-DNUiA75h.js"
+      "_HomeLayout-CQz94X6b.js"
     ],
     "css": [
       "assets/app-Dl7Ru51g.css"
     ]
   },
   "resources/js/Pages/Kemahasiswaan/FlyerTenagaKerja.jsx": {
-    "file": "assets/FlyerTenagaKerja-Ck-dUdLJ.js",
+    "file": "assets/FlyerTenagaKerja-DHSu5Lzh.js",
     "name": "FlyerTenagaKerja",
     "src": "resources/js/Pages/Kemahasiswaan/FlyerTenagaKerja.jsx",
     "isDynamicEntry": true,
     "imports": [
       "resources/js/app.jsx",
-      "_HomeLayout-DNUiA75h.js"
+      "_HomeLayout-CQz94X6b.js"
     ],
     "css": [
       "assets/app-Dl7Ru51g.css"
     ]
   },
   "resources/js/Pages/Kemahasiswaan/KomunikasiOrangTua.jsx": {
-    "file": "assets/KomunikasiOrangTua-Dnbeekjd.js",
+    "file": "assets/KomunikasiOrangTua-B9DF14Ws.js",
     "name": "KomunikasiOrangTua",
     "src": "resources/js/Pages/Kemahasiswaan/KomunikasiOrangTua.jsx",
     "isDynamicEntry": true,
     "imports": [
       "resources/js/app.jsx",
-      "_HomeLayout-DNUiA75h.js"
+      "_HomeLayout-CQz94X6b.js"
     ],
     "css": [
       "assets/app-Dl7Ru51g.css"
     ]
   },
   "resources/js/Pages/Kemahasiswaan/LayananSuratAktif.jsx": {
-    "file": "assets/LayananSuratAktif-aT15KUCj.js",
+    "file": "assets/LayananSuratAktif-fesIZd__.js",
     "name": "LayananSuratAktif",
     "src": "resources/js/Pages/Kemahasiswaan/LayananSuratAktif.jsx",
     "isDynamicEntry": true,
     "imports": [
       "resources/js/app.jsx",
-      "_HomeLayout-DNUiA75h.js"
+      "_HomeLayout-CQz94X6b.js"
     ],
     "css": [
       "assets/app-Dl7Ru51g.css"
     ]
   },
   "resources/js/Pages/Kemahasiswaan/OrganisasiMahasiswa/Bem.jsx": {
-    "file": "assets/Bem-Dl-cvHAr.js",
+    "file": "assets/Bem-By6CM16c.js",
     "name": "Bem",
     "src": "resources/js/Pages/Kemahasiswaan/OrganisasiMahasiswa/Bem.jsx",
     "isDynamicEntry": true,
     "imports": [
       "resources/js/app.jsx",
-      "_HomeLayout-DNUiA75h.js"
+      "_HomeLayout-CQz94X6b.js"
     ],
     "css": [
       "assets/app-Dl7Ru51g.css"
     ]
   },
   "resources/js/Pages/Kemahasiswaan/OrganisasiMahasiswa/Himasi.jsx": {
-    "file": "assets/Himasi-BaY-3Ui1.js",
+    "file": "assets/Himasi-DY89Odj1.js",
     "name": "Himasi",
     "src": "resources/js/Pages/Kemahasiswaan/OrganisasiMahasiswa/Himasi.jsx",
     "isDynamicEntry": true,
     "imports": [
       "resources/js/app.jsx",
-      "_HomeLayout-DNUiA75h.js"
+      "_HomeLayout-CQz94X6b.js"
     ],
     "css": [
       "assets/app-Dl7Ru51g.css"
     ]
   },
   "resources/js/Pages/Kemahasiswaan/OrganisasiMahasiswa/Himatesya.jsx": {
-    "file": "assets/Himatesya-CdNyZT4W.js",
+    "file": "assets/Himatesya-Bpla1WKx.js",
     "name": "Himatesya",
     "src": "resources/js/Pages/Kemahasiswaan/OrganisasiMahasiswa/Himatesya.jsx",
     "isDynamicEntry": true,
     "imports": [
       "resources/js/app.jsx",
-      "_HomeLayout-DNUiA75h.js"
+      "_HomeLayout-CQz94X6b.js"
     ],
     "css": [
       "assets/app-Dl7Ru51g.css"
     ]
   },
   "resources/js/Pages/Kemahasiswaan/OrganisasiMahasiswa/Hmm.jsx": {
-    "file": "assets/Hmm--m5ttPgN.js",
+    "file": "assets/Hmm-D1ehzEG7.js",
     "name": "Hmm",
     "src": "resources/js/Pages/Kemahasiswaan/OrganisasiMahasiswa/Hmm.jsx",
     "isDynamicEntry": true,
     "imports": [
       "resources/js/app.jsx",
-      "_HomeLayout-DNUiA75h.js"
+      "_HomeLayout-CQz94X6b.js"
     ],
     "css": [
       "assets/app-Dl7Ru51g.css"
     ]
   },
   "resources/js/Pages/Kemahasiswaan/TracerStudy.jsx": {
-    "file": "assets/TracerStudy-DaB-sfbA.js",
+    "file": "assets/TracerStudy-Cqljsbgs.js",
     "name": "TracerStudy",
     "src": "resources/js/Pages/Kemahasiswaan/TracerStudy.jsx",
     "isDynamicEntry": true,
     "imports": [
       "resources/js/app.jsx",
-      "_HomeLayout-DNUiA75h.js"
+      "_HomeLayout-CQz94X6b.js"
     ],
     "css": [
       "assets/app-Dl7Ru51g.css"
     ]
   },
   "resources/js/Pages/Kerjasama/Index.jsx": {
-    "file": "assets/Index-CjAwQSAo.js",
+    "file": "assets/Index-DhEwDfv8.js",
     "name": "Index",
     "src": "resources/js/Pages/Kerjasama/Index.jsx",
     "isDynamicEntry": true,
     "imports": [
       "resources/js/app.jsx",
-      "_HomeLayout-DNUiA75h.js"
+      "_HomeLayout-CQz94X6b.js"
     ],
     "css": [
       "assets/app-Dl7Ru51g.css"
     ]
   },
   "resources/js/Pages/Pendidikan/Beasiswa.jsx": {
-    "file": "assets/Beasiswa-CVV28Hxd.js",
+    "file": "assets/Beasiswa-BWVeCxkG.js",
     "name": "Beasiswa",
     "src": "resources/js/Pages/Pendidikan/Beasiswa.jsx",
     "isDynamicEntry": true,
     "imports": [
       "resources/js/app.jsx",
-      "_HomeLayout-DNUiA75h.js"
+      "_HomeLayout-CQz94X6b.js"
     ],
     "css": [
       "assets/app-Dl7Ru51g.css"
     ]
   },
   "resources/js/Pages/Pendidikan/Jurnal.jsx": {
-    "file": "assets/Jurnal-WZlfdgj-.js",
+    "file": "assets/Jurnal-Bv5pYzhb.js",
     "name": "Jurnal",
     "src": "resources/js/Pages/Pendidikan/Jurnal.jsx",
     "isDynamicEntry": true,
     "imports": [
       "resources/js/app.jsx",
-      "_HomeLayout-DNUiA75h.js"
+      "_HomeLayout-CQz94X6b.js"
     ],
     "css": [
       "assets/app-Dl7Ru51g.css"
     ]
   },
   "resources/js/Pages/Pendidikan/Laboratorium.jsx": {
-    "file": "assets/Laboratorium-CDQMugQu.js",
+    "file": "assets/Laboratorium-CbZTBJD5.js",
     "name": "Laboratorium",
     "src": "resources/js/Pages/Pendidikan/Laboratorium.jsx",
     "isDynamicEntry": true,
     "imports": [
       "resources/js/app.jsx",
-      "_HomeLayout-DNUiA75h.js"
+      "_HomeLayout-CQz94X6b.js"
     ],
     "css": [
       "assets/app-Dl7Ru51g.css"
     ]
   },
   "resources/js/Pages/Pendidikan/Perpustakaan.jsx": {
-    "file": "assets/Perpustakaan-v4rnIU8V.js",
+    "file": "assets/Perpustakaan-Doe6WxBX.js",
     "name": "Perpustakaan",
     "src": "resources/js/Pages/Pendidikan/Perpustakaan.jsx",
     "isDynamicEntry": true,
     "imports": [
       "resources/js/app.jsx",
-      "_HomeLayout-DNUiA75h.js"
+      "_HomeLayout-CQz94X6b.js"
     ],
     "css": [
       "assets/app-Dl7Ru51g.css"
     ]
   },
   "resources/js/Pages/Prodi/SistemInformasi/Dosen.jsx": {
-    "file": "assets/Dosen-CNGA5oWw.js",
+    "file": "assets/Dosen-4yp4f8fO.js",
     "name": "Dosen",
     "src": "resources/js/Pages/Prodi/SistemInformasi/Dosen.jsx",
     "isDynamicEntry": true,
     "imports": [
       "resources/js/app.jsx",
-      "_HomeLayout-DNUiA75h.js"
+      "_HomeLayout-CQz94X6b.js"
     ],
     "css": [
       "assets/app-Dl7Ru51g.css"
     ]
   },
   "resources/js/Pages/Prodi/SistemInformasi/Kurikulum.jsx": {
-    "file": "assets/Kurikulum-CyyTsFOb.js",
+    "file": "assets/Kurikulum-scmTW5wk.js",
     "name": "Kurikulum",
     "src": "resources/js/Pages/Prodi/SistemInformasi/Kurikulum.jsx",
     "isDynamicEntry": true,
     "imports": [
       "resources/js/app.jsx",
-      "_HomeLayout-DNUiA75h.js"
+      "_HomeLayout-CQz94X6b.js"
     ],
     "css": [
       "assets/app-Dl7Ru51g.css"
     ]
   },
   "resources/js/Pages/Prodi/SistemInformasi/Visi.jsx": {
-    "file": "assets/Visi-9WJ9aUax.js",
+    "file": "assets/Visi-B4wYEee5.js",
     "name": "Visi",
     "src": "resources/js/Pages/Prodi/SistemInformasi/Visi.jsx",
     "isDynamicEntry": true,
     "imports": [
       "resources/js/app.jsx",
-      "_HomeLayout-DNUiA75h.js"
+      "_HomeLayout-CQz94X6b.js"
     ],
     "css": [
       "assets/app-Dl7Ru51g.css"
     ]
   },
   "resources/js/Pages/Prodi/TeknikMesin/Dosen.jsx": {
-    "file": "assets/Dosen-FvbcDfz5.js",
+    "file": "assets/Dosen-Bb-MYkpo.js",
     "name": "Dosen",
     "src": "resources/js/Pages/Prodi/TeknikMesin/Dosen.jsx",
     "isDynamicEntry": true,
     "imports": [
       "resources/js/app.jsx",
-      "_HomeLayout-DNUiA75h.js"
+      "_HomeLayout-CQz94X6b.js"
     ],
     "css": [
       "assets/app-Dl7Ru51g.css"
     ]
   },
   "resources/js/Pages/Prodi/TeknikMesin/Kurikulum.jsx": {
-    "file": "assets/Kurikulum-Do56yJ_p.js",
+    "file": "assets/Kurikulum-QCF45f0i.js",
     "name": "Kurikulum",
     "src": "resources/js/Pages/Prodi/TeknikMesin/Kurikulum.jsx",
     "isDynamicEntry": true,
     "imports": [
       "resources/js/app.jsx",
-      "_HomeLayout-DNUiA75h.js"
+      "_HomeLayout-CQz94X6b.js"
     ],
     "css": [
       "assets/app-Dl7Ru51g.css"
     ]
   },
   "resources/js/Pages/Prodi/TeknikMesin/Visi.jsx": {
-    "file": "assets/Visi-B07tgdaT.js",
+    "file": "assets/Visi-DzLHaF7P.js",
     "name": "Visi",
     "src": "resources/js/Pages/Prodi/TeknikMesin/Visi.jsx",
     "isDynamicEntry": true,
     "imports": [
       "resources/js/app.jsx",
-      "_HomeLayout-DNUiA75h.js"
+      "_HomeLayout-CQz94X6b.js"
     ],
     "css": [
       "assets/app-Dl7Ru51g.css"
     ]
   },
   "resources/js/Pages/Prodi/TeknikSipil/Dosen.jsx": {
-    "file": "assets/Dosen-DO4AysEm.js",
+    "file": "assets/Dosen-B6DgK1OS.js",
     "name": "Dosen",
     "src": "resources/js/Pages/Prodi/TeknikSipil/Dosen.jsx",
     "isDynamicEntry": true,
     "imports": [
       "resources/js/app.jsx",
-      "_HomeLayout-DNUiA75h.js"
+      "_HomeLayout-CQz94X6b.js"
     ],
     "css": [
       "assets/app-Dl7Ru51g.css"
     ]
   },
   "resources/js/Pages/Prodi/TeknikSipil/Kurikulum.jsx": {
-    "file": "assets/Kurikulum-BlXvvUKb.js",
+    "file": "assets/Kurikulum-D4mAAyWn.js",
     "name": "Kurikulum",
     "src": "resources/js/Pages/Prodi/TeknikSipil/Kurikulum.jsx",
     "isDynamicEntry": true,
     "imports": [
       "resources/js/app.jsx",
-      "_HomeLayout-DNUiA75h.js"
+      "_HomeLayout-CQz94X6b.js"
     ],
     "css": [
       "assets/app-Dl7Ru51g.css"
     ]
   },
   "resources/js/Pages/Prodi/TeknikSipil/Visi.jsx": {
-    "file": "assets/Visi-CXStWVs0.js",
+    "file": "assets/Visi-D2x4cZtv.js",
     "name": "Visi",
     "src": "resources/js/Pages/Prodi/TeknikSipil/Visi.jsx",
     "isDynamicEntry": true,
     "imports": [
       "resources/js/app.jsx",
-      "_HomeLayout-DNUiA75h.js"
+      "_HomeLayout-CQz94X6b.js"
     ],
     "css": [
       "assets/app-Dl7Ru51g.css"
     ]
   },
   "resources/js/Pages/Profile/KalenderAkademik/Index.jsx": {
-    "file": "assets/Index-BTwg7-6B.js",
+    "file": "assets/Index-C7Yb2XE8.js",
     "name": "Index",
     "src": "resources/js/Pages/Profile/KalenderAkademik/Index.jsx",
     "isDynamicEntry": true,
     "imports": [
       "resources/js/app.jsx",
-      "_HomeLayout-DNUiA75h.js"
+      "_HomeLayout-CQz94X6b.js"
     ],
     "css": [
       "assets/app-Dl7Ru51g.css"
     ]
   },
   "resources/js/Pages/Profile/Roadmap/Index.jsx": {
-    "file": "assets/Index-C9iBc7CL.js",
+    "file": "assets/Index-BEzEhS7w.js",
     "name": "Index",
     "src": "resources/js/Pages/Profile/Roadmap/Index.jsx",
     "isDynamicEntry": true,
     "imports": [
       "resources/js/app.jsx",
-      "_HomeLayout-DNUiA75h.js"
+      "_HomeLayout-CQz94X6b.js"
     ],
     "css": [
       "assets/app-Dl7Ru51g.css"
     ]
   },
   "resources/js/Pages/Profile/Sejarah/Index.jsx": {
-    "file": "assets/Index-BaZYqbfy.js",
+    "file": "assets/Index-BQ6qYYZ1.js",
     "name": "Index",
     "src": "resources/js/Pages/Profile/Sejarah/Index.jsx",
     "isDynamicEntry": true,
     "imports": [
       "resources/js/app.jsx",
-      "_HomeLayout-DNUiA75h.js"
+      "_HomeLayout-CQz94X6b.js"
     ],
     "css": [
       "assets/app-Dl7Ru51g.css"
     ]
   },
   "resources/js/Pages/Profile/StrukturOrganisasi/Index.jsx": {
-    "file": "assets/Index-BCawXYWu.js",
+    "file": "assets/Index-DbehT3JR.js",
     "name": "Index",
     "src": "resources/js/Pages/Profile/StrukturOrganisasi/Index.jsx",
     "isDynamicEntry": true,
     "imports": [
       "resources/js/app.jsx",
-      "_HomeLayout-DNUiA75h.js"
+      "_HomeLayout-CQz94X6b.js"
     ],
     "css": [
       "assets/app-Dl7Ru51g.css"
     ]
   },
   "resources/js/Pages/Profile/VisiMisi/Index.jsx": {
-    "file": "assets/Index-BY3ezt9o.js",
+    "file": "assets/Index-BknbiZkd.js",
     "name": "Index",
     "src": "resources/js/Pages/Profile/VisiMisi/Index.jsx",
     "isDynamicEntry": true,
     "imports": [
       "resources/js/app.jsx",
-      "_HomeLayout-DNUiA75h.js"
+      "_HomeLayout-CQz94X6b.js"
     ],
     "css": [
       "assets/app-Dl7Ru51g.css"
     ]
   },
   "resources/js/Pages/QualityAssurance/DokumenAmi.jsx": {
-    "file": "assets/DokumenAmi-S2uMSqSa.js",
+    "file": "assets/DokumenAmi-BiZ4t8lQ.js",
     "name": "DokumenAmi",
     "src": "resources/js/Pages/QualityAssurance/DokumenAmi.jsx",
     "isDynamicEntry": true,
     "imports": [
       "resources/js/app.jsx",
-      "_HomeLayout-DNUiA75h.js"
+      "_HomeLayout-CQz94X6b.js"
     ],
     "css": [
       "assets/app-Dl7Ru51g.css"
     ]
   },
   "resources/js/Pages/QualityAssurance/DokumenMonev.jsx": {
-    "file": "assets/DokumenMonev-BMYS03Sh.js",
+    "file": "assets/DokumenMonev-BwQ34JMv.js",
     "name": "DokumenMonev",
     "src": "resources/js/Pages/QualityAssurance/DokumenMonev.jsx",
     "isDynamicEntry": true,
     "imports": [
       "resources/js/app.jsx",
-      "_HomeLayout-DNUiA75h.js"
+      "_HomeLayout-CQz94X6b.js"
     ],
     "css": [
       "assets/app-Dl7Ru51g.css"
     ]
   },
   "resources/js/Pages/QualityAssurance/Sop.jsx": {
-    "file": "assets/Sop-DOmwK0Og.js",
+    "file": "assets/Sop-DPEW3O20.js",
     "name": "Sop",
     "src": "resources/js/Pages/QualityAssurance/Sop.jsx",
     "isDynamicEntry": true,
     "imports": [
       "resources/js/app.jsx",
-      "_HomeLayout-DNUiA75h.js"
+      "_HomeLayout-CQz94X6b.js"
     ],
     "css": [
       "assets/app-Dl7Ru51g.css"
     ]
   },
   "resources/js/Pages/QualityAssurance/Survey.jsx": {
-    "file": "assets/Survey-B8I05I3J.js",
+    "file": "assets/Survey-DvPiiHX0.js",
     "name": "Survey",
     "src": "resources/js/Pages/QualityAssurance/Survey.jsx",
     "isDynamicEntry": true,
     "imports": [
       "resources/js/app.jsx",
-      "_HomeLayout-DNUiA75h.js"
+      "_HomeLayout-CQz94X6b.js"
     ],
     "css": [
       "assets/app-Dl7Ru51g.css"
     ]
   },
   "resources/js/app.jsx": {
-    "file": "assets/app-1hKZ0psv.js",
+    "file": "assets/app-CHTV6sph.js",
     "name": "app",
     "src": "resources/js/app.jsx",
     "isEntry": true,

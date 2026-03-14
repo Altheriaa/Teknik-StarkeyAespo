@@ -32,7 +32,7 @@ export default function EngineeringCareerCentre({ flyers = [] }) {
             {/* <!-- Informasi Rekrutmen Tenaga Kerja Section --> */}
             <section className="sectionTujuanTracerStudy text-center py-5 mt-4" style={{ backgroundColor: '#f8f9fa' }}>
                 <div className="container mt-2">
-                    <h2 className="fw-bold" style={{ color: '#1B263B', textTransform: 'uppercase', letterSpacing: '1px' }}>Flyer Penerimaan Tenaga Kerja</h2>
+                    <h2 className="fw-bold" style={{ color: '#1B263B', textTransform: 'uppercase', letterSpacing: '1px' }}>Peluang Karir</h2>
                     <div className="d-flex justify-content-center mb-3">
                         <div style={{ width: '50px', height: '3px', backgroundColor: '#FFC107' }}></div>
                     </div>

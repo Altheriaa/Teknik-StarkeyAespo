@@ -22,7 +22,7 @@ export default function FlyerTenagaKerja({ flyers }) {
         <HomeLayout header="Flyer Penerimaan Tenaga Kerja">
             <div className="container py-5 mt-4">
                 <div className="text-center mb-5">
-                    <h1 className="fw-bold" style={{ color: '#1B263B', textTransform: 'uppercase', letterSpacing: '1px' }}>Flyer Penerimaan Tenaga Kerja</h1>
+                    <h1 className="fw-bold" style={{ color: '#1B263B', textTransform: 'uppercase', letterSpacing: '1px' }}>Peluang Karir</h1>
                     <div className="d-flex justify-content-center mb-3">
                         <div style={{ width: '50px', height: '3px', backgroundColor: '#FFC107' }}></div>
                     </div>
