@@ -81,7 +81,7 @@ export default function VisiTeknikSipil({ Kaprodi }) {
                                 <img src="/asset/akred/Sertif Akred Sipil.jpg" className="img-akred" alt="Foto Departemen 1" />
                                 <div className="overlay-akred">
                                     <div className="button-akred">
-                                        <a href="/asset/akred/Sertif Akred SI.jpg" download> Download </a>
+                                        <a href="/asset/akred/Sertif Akred Sipil.jpg" download> Download </a>
                                     </div>
                                 </div>
                             </div>
