@@ -83,7 +83,7 @@ export default function VisiTeknikMesin({ Kaprodi }) {
                                 <img src="/asset/akred/FT-Mesin.jpg" className="img-akred" alt="Foto Departemen 1" />
                                 <div className="overlay-akred">
                                     <div className="button-akred">
-                                        <Link href="/asset/akred/FT-Mesin.jpg" download> Download </Link>
+                                        <a href="/asset/akred/FT-Mesin.jpg" download> Download </a>
                                     </div>
                                 </div>
                             </div>
