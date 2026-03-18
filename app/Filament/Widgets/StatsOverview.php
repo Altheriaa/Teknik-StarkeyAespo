@@ -27,7 +27,7 @@ class StatsOverview extends BaseWidget
 
         return [
             Stat::make('Total Pengunjung', $totalVisitor)
-                ->description('Pengunjung website bulan ini')
+                ->description('Total pengunjung website')
                 ->descriptionIcon('heroicon-m-users')
                 ->color('success'),
                 
