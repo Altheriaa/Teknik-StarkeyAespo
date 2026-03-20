@@ -334,15 +334,10 @@ export default function HomeLayout({ children }) {
                                         <i className="fa-solid fa-envelope"></i><span className="ms-2">
                                             fakultas_teknik@abulyatama.ac.id</span>
                                     </li>
-                                    <section className="mt-4">
-                                        {/* <!-- Facebook --> */}
-                                        <a data-mdb-ripple-init className="btn btn-outline btn-floating m-1" href="#!" role="button"><i
-                                                className="fab fa-facebook-f"></i></a>
-
-                                        {/* <!-- Instagram --> */}
-                                        <a data-mdb-ripple-init className="btn btn-outline btn-floating m-1" href="#!" role="button"><i
-                                                className="fab fa-instagram"></i></a>
-                                    </section>
+                                    <li>
+                                        <a data-mdb-ripple-init className="btn btn-outline btn-floating m-1" href="https://www.instagram.com/fakultasteknik.unaya/?utm_source=ig_web_button_share_sheet" target='_blank' role="button"><i
+                                            className="fab fa-instagram gap-2"></i> fakultasteknik.unaya</a>
+                                    </li>
                                 </ul>
                             </div>
                             {/*Grid column: Logo*/}
