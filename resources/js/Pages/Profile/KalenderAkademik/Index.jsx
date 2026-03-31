@@ -44,7 +44,7 @@ export default function KalenderAkademik({ KalenderAkademiks, RosterAkademiks })
                                     style={{ border: "none" }}>
                                 </iframe>
                                 <div className="mt-2 text-center">
-                                    <a href={`/storage/${roster.sipil}`} download className="btn btn-custom">
+                                    <a href={`/storage/${roster.roster_sipil}`} download className="btn btn-custom">
                                         <i className="bi bi-download"></i> Download 
                                     </a>
                                 </div>
@@ -59,7 +59,7 @@ export default function KalenderAkademik({ KalenderAkademiks, RosterAkademiks })
                                     style={{ border: "none" }}>
                                 </iframe>
                                 <div className="mt-2 text-center">
-                                    <a href="" download className="btn btn-custom">
+                                    <a href={`/storage/${roster.roster_mesin}`} download className="btn btn-custom">
                                         <i className="bi bi-download"></i> Download 
                                     </a>
                                 </div>
@@ -74,7 +74,7 @@ export default function KalenderAkademik({ KalenderAkademiks, RosterAkademiks })
                                     style={{ border: "none" }}>
                                 </iframe>
                                 <div className="mt-2 text-center">
-                                    <a href="" download className="btn btn-custom">
+                                    <a href={`/storage/${roster.roster_sistem_informasi}`} download className="btn btn-custom">
                                         <i className="bi bi-download"></i> Download 
                                     </a>
                                 </div>
