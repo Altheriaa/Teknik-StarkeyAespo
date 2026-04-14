@@ -16,7 +16,6 @@ export default function KalenderAkademik({ KalenderAkademiks, RosterAkademiks })
 
             {/* <!--Struktur Organisasi Section--> */}
             <section className="kalender-akademik-section">
-                {/* @foreach ( $KalenderAkademiks as $KalenderAkademik ) */}
                 {KalenderAkademiks.map((kalender) => (
                         <div className="container-kalender-akademik text-center">
                             {/* <!-- Gambar Kalender Genap --> */}
@@ -32,7 +31,6 @@ export default function KalenderAkademik({ KalenderAkademiks, RosterAkademiks })
 
                 <div className="roster-container">
                     <h2>Roster Akademik</h2>
-                    {/* @foreach ( $RosterAkademiks as $RosterAkademik) */}
                     {RosterAkademiks.map((roster, index) => (
                         <React.Fragment key={index}>.
                             <div className="roster-card">
@@ -83,7 +81,6 @@ export default function KalenderAkademik({ KalenderAkademiks, RosterAkademiks })
                     ))}
                 </div>
             </section>
-
         </HomeLayout>
     );
 }
