@@ -62,12 +62,44 @@ export default function HomeLayout({ children }) {
                                 </li>
                             </ul>
                         </li>
-                        <li><a href="#">Pendidikan</a>
+                        <li>
+                        <a href="#">Pendidikan</a>
                             <ul className="submenu_dropdown-nav">
-                                <li><Link href="/laboratorium" className="no-border-hover">Laboratorium</Link></li>
-                                <li><Link href="/beasiswa" className="no-border-hover">Beasiswa</Link></li>
-                                <li><Link href="/perpustakaan" className="no-border-hover">Perpustakaan</Link></li>
-                                <li><Link href="/jurnal" className="no-border-hover">Jurnal</Link></li>
+                                <li>
+                                    <Link href="/laboratorium" className="no-border-hover">
+                                        Laboratorium
+                                    </Link>
+                                </li>
+
+                                <li>
+                                    <Link href="/beasiswa" className="no-border-hover">
+                                        Beasiswa
+                                    </Link>
+                                </li>
+
+                                <li>
+                                    <Link href="/perpustakaan" className="no-border-hover">
+                                        Perpustakaan
+                                    </Link>
+                                </li>
+
+                                <li>
+                                    <Link href="/jurnal" className="no-border-hover">
+                                        Jurnal
+                                    </Link>
+                                </li>
+
+                                {/* Menu baru LMS */}
+                                <li>
+                                    <a
+                                        href="https://siapunaya.xyz"
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        className="no-border-hover"
+                                    >
+                                        LMS
+                                    </a>
+                                </li>
                             </ul>
                         </li>
                         <li><a href="#">Kemahasiswaan</a>
