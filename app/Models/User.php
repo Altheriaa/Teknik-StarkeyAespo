@@ -60,9 +60,7 @@ class User extends Authenticatable implements FilamentUser
         return $this->role === self::ROLE_ADMIN;
     }
 
-    /**
-     * Hanya admin aktif yang boleh masuk panel Filament (/ft-unaya).
-     */
+    
     public function canAccessPanel(Panel $panel): bool
     {
         return $this->is_active && $this->isAdmin();
