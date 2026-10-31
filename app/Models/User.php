@@ -14,6 +14,9 @@ class User extends Authenticatable implements FilamentUser
     /** @use HasFactory<\Database\Factories\UserFactory> */
     use HasFactory, Notifiable;
 
+    public const ROLE_ADMIN = 'admin';
+    public const ROLE_QA_VIEWER = 'qa_viewer';
+
     /**
      * The attributes that are mass assignable.
      *
@@ -21,8 +24,11 @@ class User extends Authenticatable implements FilamentUser
      */
     protected $fillable = [
         'name',
+        'username',
         'email',
         'password',
+        'role',
+        'is_active',
     ];
 
     /**
@@ -45,11 +51,29 @@ class User extends Authenticatable implements FilamentUser
         return [
             'email_verified_at' => 'datetime',
             'password' => 'hashed',
+            'is_active' => 'boolean',
         ];
     }
 
+    public function isAdmin(): bool
+    {
+        return $this->role === self::ROLE_ADMIN;
+    }
+
+    /**
+     * Hanya admin aktif yang boleh masuk panel Filament (/ft-unaya).
+     */
     public function canAccessPanel(Panel $panel): bool
     {
-        return true;
+        return $this->is_active && $this->isAdmin();
+    }
+
+    /**
+     * Admin dan qa_viewer aktif boleh membuka halaman Quality Assurance.
+     */
+    public function canViewQa(): bool
+    {
+        return $this->is_active
+            && in_array($this->role, [self::ROLE_ADMIN, self::ROLE_QA_VIEWER], true);
     }
 }

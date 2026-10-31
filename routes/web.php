@@ -22,6 +22,7 @@ use App\Http\Controllers\DokumenAmiController;
 use App\Http\Controllers\DokumenMonevController;
 use App\Http\Controllers\CareerController;
 use App\Http\Controllers\FlyerController;
+use App\Http\Controllers\AuthController;
 
 // Route Home
 Route::get('/', [HomeController::class, 'index']);
@@ -149,18 +150,27 @@ Route::get('/pengurusan-surat', [PengurusanSuratController::class, 'index']);
 // Dokumen
 Route::get('/dokumen', [DokumenController::class, 'index']);
 
-// Quatlity Assurance
-// SOP
-Route::get('/sop', [SopController::class, 'index']);
+// Login / Logout website (untuk akun Quality Assurance)
+Route::middleware('guest')->group(function () {
+    Route::get('/login', [AuthController::class, 'create'])->name('login');
+    Route::post('/login', [AuthController::class, 'store']);
+});
+Route::post('/logout', [AuthController::class, 'destroy'])->middleware('auth')->name('logout');
 
-// Survey
-Route::get('/survey', [SurveyController::class, 'index']);
+// Quality Assurance (wajib login)
+Route::middleware('qa')->group(function () {
+    // SOP
+    Route::get('/sop', [SopController::class, 'index']);
 
-// Dokumen AMI
-Route::get('/dokumen-ami', [DokumenAmiController::class, 'index']);
+    // Survey
+    Route::get('/survey', [SurveyController::class, 'index']);
 
-// Dokumen Monev
-Route::get('/dokumen-monev', [DokumenMonevController::class, 'index']);
+    // Dokumen AMI
+    Route::get('/dokumen-ami', [DokumenAmiController::class, 'index']);
+
+    // Dokumen Monev
+    Route::get('/dokumen-monev', [DokumenMonevController::class, 'index']);
+});
 
 Route::get('/inspira', function () {
     return view('inspira');

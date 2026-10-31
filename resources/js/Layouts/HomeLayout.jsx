@@ -1,6 +1,14 @@
-import { Link } from '@inertiajs/react';
+import { Link, router } from '@inertiajs/react';
 import { useState } from 'react';
 import { usePage } from '@inertiajs/react';
+
+// Daftar sub menu Quality Assurance (wajib login)
+const qaMenu = [
+    { href: '/sop', label: 'SOP' },
+    { href: '/survey', label: 'Survey' },
+    { href: '/dokumen-ami', label: 'Dokumen AMI' },
+    { href: '/dokumen-monev', label: 'Dokumen Monev' },
+];
 
 export default function HomeLayout({ children }) {
 
@@ -8,7 +16,18 @@ export default function HomeLayout({ children }) {
     const [activeMenu, setActiveMenu] = useState("main")
     const [isVisitorHovered, setIsVisitorHovered] = useState(false);
 
-    const { flash, visitors } = usePage().props;
+    const { flash, visitors, auth } = usePage().props;
+    const isLoggedIn = !!auth?.user;
+
+    const handleLogout = (e) => {
+        e?.preventDefault();
+        setMobileOpen(false);
+        router.post('/logout');
+    };
+
+    const lockIcon = !isLoggedIn && (
+        <i className="fa-solid fa-lock ms-2" style={{ fontSize: '0.75em' }} title="Perlu login"></i>
+    );
 
     const showMenu = (menu) => {
         setActiveMenu(menu)
@@ -139,12 +158,21 @@ export default function HomeLayout({ children }) {
                                         className="no-border-hover">Video Intro / Outro Teknik</a></li>
                             </ul>
                         </li>
-                        <li><Link href="#">Quality Assurance</Link>
+                        <li><Link href="#">Quality Assurance{lockIcon}</Link>
                             <ul className="submenu_dropdown-nav">
-                                <li><Link href="/sop" className="no-border-hover">SOP</Link></li>
-                                <li><Link href="/survey" className="no-border-hover">Survey</Link></li>
-                                <li><Link href="/dokumen-ami" className="no-border-hover">Dokumen AMI</Link></li>
-                                <li><Link href="/dokumen-monev" className="no-border-hover">Dokumen Monev</Link></li>
+                                {qaMenu.map((item) => (
+                                    <li key={item.href}>
+                                        <Link href={item.href} className="no-border-hover">{item.label}{lockIcon}</Link>
+                                    </li>
+                                ))}
+                                {isLoggedIn && (
+                                    <li>
+                                        <a href="#" className="no-border-hover" onClick={handleLogout}>
+                                            <i className="fa-solid fa-right-from-bracket me-2"></i>
+                                            Logout ({auth.user.name})
+                                        </a>
+                                    </li>
+                                )}
                             </ul>
                         </li>
                     </ul>
@@ -177,7 +205,7 @@ export default function HomeLayout({ children }) {
                             <li onClick={() => showMenu("award")}>Award</li>
                             <li><Link href="/kerjasama">Kerjasama</Link></li>
                             <li onClick={() => showMenu("download")}>Download</li>
-                            <li onClick={() => showMenu("quality_assurance")}>Quality Assurance</li>
+                            <li onClick={() => showMenu("quality_assurance")}>Quality Assurance{lockIcon}</li>
                         </ul>
                     )}
 
@@ -282,10 +310,15 @@ export default function HomeLayout({ children }) {
                     {activeMenu === "quality_assurance" && (
                         <ul className="menu-slide">
                             <li className="back-button-nav" onClick={() => showMenu("main")}><i className="fa-solid fa-chevron-left me-2"></i> KEMBALI</li>
-                            <li><Link href="/sop">SOP</Link></li>
-                            <li><Link href="/survey">Survey</Link></li>
-                            <li><Link href="/dokumen-ami">Dokumen AMI</Link></li>
-                            <li><Link href="/dokumen-monev">Dokumen Monev</Link></li>
+                            {qaMenu.map((item) => (
+                                <li key={item.href}><Link href={item.href}>{item.label}{lockIcon}</Link></li>
+                            ))}
+                            {isLoggedIn && (
+                                <li onClick={handleLogout}>
+                                    <i className="fa-solid fa-right-from-bracket me-2"></i>
+                                    Logout ({auth.user.name})
+                                </li>
+                            )}
                         </ul>
                     )}
                 </div>

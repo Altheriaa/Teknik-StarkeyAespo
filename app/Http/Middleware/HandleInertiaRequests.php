@@ -41,6 +41,13 @@ class HandleInertiaRequests extends Middleware
 
         return [
             ...parent::share($request),
+            'auth' => [
+                'user' => $request->user() ? [
+                    'name' => $request->user()->name,
+                    'username' => $request->user()->username,
+                    'role' => $request->user()->role,
+                ] : null,
+            ],
             'visitors' => [
                 'today' => Visitor::whereDate('created_at', Carbon::today())->count(),
                 'yesterday' => Visitor::whereDate('created_at', Carbon::yesterday())->count(),
