@@ -14,7 +14,7 @@ return new class extends Migration
             $table->string('username')->nullable()->unique()->after('name');
             // admin = boleh masuk panel Filament + halaman QA
             // qa_viewer = hanya boleh melihat halaman QA di website
-            $table->string('role', 20)->default('qa_viewer')->after('password');
+            $table->string('role', 20)->default('admin')->after('password');
             $table->boolean('is_active')->default(true)->after('role');
             // Akun QA tidak wajib punya email
             $table->string('email')->nullable()->change();
