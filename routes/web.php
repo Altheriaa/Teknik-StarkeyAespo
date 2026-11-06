@@ -23,6 +23,9 @@ use App\Http\Controllers\DokumenMonevController;
 use App\Http\Controllers\CareerController;
 use App\Http\Controllers\FlyerController;
 use App\Http\Controllers\AuthController;
+use App\Http\Controllers\EspmiController;
+use App\Http\Controllers\EspmiLaporanController;
+use App\Http\Controllers\EspmiRekapController;
 
 // Route Home
 Route::get('/', [HomeController::class, 'index']);
@@ -170,6 +173,18 @@ Route::middleware('qa')->group(function () {
 
     // Dokumen Monev
     Route::get('/dokumen-monev', [DokumenMonevController::class, 'index']);
+
+    // e-SPMI (lihat: semua akun QA | menilai: admin & auditor | isi bukti: Ka. Prodi)
+    Route::get('/e-spmi', [EspmiController::class, 'index']);
+    Route::post('/e-spmi/indikator/{indikator}', [EspmiController::class, 'simpan']);
+    // Ka. Prodi: isi bukti (link/berkas + deskripsi) untuk prodinya sendiri
+    Route::post('/e-spmi/indikator/{indikator}/bukti', [EspmiController::class, 'isiBukti']);
+    Route::get('/e-spmi/bukti/{isian}', [EspmiController::class, 'unduhBukti']);
+    Route::get('/e-spmi/rekap', [EspmiRekapController::class, 'index']);
+
+    // Laporan cetak e-SPMI: DT & PTK (PDF)
+    Route::get('/e-spmi/laporan/dt', [EspmiLaporanController::class, 'dt']);
+    Route::get('/e-spmi/laporan/ptk', [EspmiLaporanController::class, 'ptk']);
 });
 
 Route::get('/inspira', function () {

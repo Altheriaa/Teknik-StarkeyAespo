@@ -18,6 +18,7 @@ use Filament\Support\Icons\Heroicon;
 use Filament\Tables\Columns\IconColumn;
 use Filament\Tables\Columns\TextColumn;
 use Filament\Tables\Table;
+use Illuminate\Validation\Rules\Unique;
 
 class UserResource extends Resource
 {
@@ -46,7 +47,9 @@ class UserResource extends Resource
                 Select::make('role')
                     ->label('Hak Akses')
                     ->options([
-                        User::ROLE_QA_VIEWER => 'Pengguna QA (hanya melihat halaman Quality Assurance)',
+                        User::ROLE_QA_VIEWER => 'Pengguna QA (hanya melihat Quality Assurance & e-SPMI)',
+                        User::ROLE_AUDITOR => 'Auditor (melihat QA + menilai di e-SPMI)',
+                        User::ROLE_KAPRODI => 'Ka. Prodi (mengisi bukti e-SPMI untuk satu program studi)',
                         User::ROLE_ADMIN => 'Admin (panel admin + halaman Quality Assurance)',
                     ])
                     ->default(User::ROLE_QA_VIEWER)
@@ -54,6 +57,17 @@ class UserResource extends Resource
                     ->live()
                     // Admin tidak bisa mengubah hak akses akunnya sendiri
                     ->disabled(fn (?User $record) => $record?->is(auth()->user())),
+                Select::make('program_studi')
+                    ->label('Program Studi')
+                    ->options(array_combine(config('espmi.program_studi'), config('espmi.program_studi')))
+                    ->helperText('Satu akun Ka. Prodi hanya untuk satu program studi, dan satu prodi hanya boleh punya satu akun Ka. Prodi.')
+                    ->visible(fn (Get $get) => $get('role') === User::ROLE_KAPRODI)
+                    ->required(fn (Get $get) => $get('role') === User::ROLE_KAPRODI)
+                    ->unique(
+                        ignoreRecord: true,
+                        modifyRuleUsing: fn (Unique $rule) => $rule->where('role', User::ROLE_KAPRODI),
+                    )
+                    ->validationMessages(['unique' => 'Program studi ini sudah punya akun Ka. Prodi.']),
                 TextInput::make('username')
                     ->label('Username')
                     ->helperText('Dipakai untuk login di website. Huruf, angka, strip, dan underscore.')
@@ -102,8 +116,22 @@ class UserResource extends Resource
                 TextColumn::make('role')
                     ->label('Hak Akses')
                     ->badge()
-                    ->formatStateUsing(fn (string $state) => $state === User::ROLE_ADMIN ? 'Admin' : 'Pengguna QA')
-                    ->color(fn (string $state) => $state === User::ROLE_ADMIN ? 'warning' : 'info'),
+                    ->formatStateUsing(fn (string $state) => match ($state) {
+                        User::ROLE_ADMIN => 'Admin',
+                        User::ROLE_AUDITOR => 'Auditor',
+                        User::ROLE_KAPRODI => 'Ka. Prodi',
+                        default => 'Pengguna QA',
+                    })
+                    ->color(fn (string $state) => match ($state) {
+                        User::ROLE_ADMIN => 'warning',
+                        User::ROLE_AUDITOR => 'success',
+                        User::ROLE_KAPRODI => 'primary',
+                        default => 'info',
+                    }),
+                TextColumn::make('program_studi')
+                    ->label('Program Studi')
+                    ->placeholder('-')
+                    ->searchable(),
                 IconColumn::make('is_active')
                     ->label('Aktif')
                     ->boolean(),

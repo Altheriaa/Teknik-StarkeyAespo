@@ -8,6 +8,7 @@ const qaMenu = [
     { href: '/survey', label: 'Survey' },
     { href: '/dokumen-ami', label: 'Dokumen AMI' },
     { href: '/dokumen-monev', label: 'Dokumen Monev' },
+    { href: '/e-spmi', label: 'e-SPMI' },
 ];
 
 export default function HomeLayout({ children }) {
@@ -158,7 +159,7 @@ export default function HomeLayout({ children }) {
                                         className="no-border-hover">Video Intro / Outro Teknik</a></li>
                             </ul>
                         </li>
-                        <li><Link href="#">Quality Assurance{lockIcon}</Link>
+                        <li><Link href="#">e-SPMI{lockIcon}</Link>
                             <ul className="submenu_dropdown-nav">
                                 {qaMenu.map((item) => (
                                     <li key={item.href}>
@@ -205,7 +206,7 @@ export default function HomeLayout({ children }) {
                             <li onClick={() => showMenu("award")}>Award</li>
                             <li><Link href="/kerjasama">Kerjasama</Link></li>
                             <li onClick={() => showMenu("download")}>Download</li>
-                            <li onClick={() => showMenu("quality_assurance")}>Quality Assurance{lockIcon}</li>
+                            <li onClick={() => showMenu("e-spmi")}>e-SPMI{lockIcon}</li>
                         </ul>
                     )}
 
@@ -307,7 +308,7 @@ export default function HomeLayout({ children }) {
                         </ul>
                     )}
 
-                    {activeMenu === "quality_assurance" && (
+                    {activeMenu === "e-spmi" && (
                         <ul className="menu-slide">
                             <li className="back-button-nav" onClick={() => showMenu("main")}><i className="fa-solid fa-chevron-left me-2"></i> KEMBALI</li>
                             {qaMenu.map((item) => (

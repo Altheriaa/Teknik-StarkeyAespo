@@ -60,7 +60,10 @@ class AuthController extends Controller
         RateLimiter::clear($throttleKey);
         $request->session()->regenerate();
 
-        return redirect()->intended('/sop');
+        // Ka. Prodi langsung diarahkan ke e-SPMI (pekerjaan utamanya di sana)
+        $default = $request->user()->isKaprodi() ? '/e-spmi' : '/sop';
+
+        return redirect()->intended($default);
     }
 
     public function destroy(Request $request)

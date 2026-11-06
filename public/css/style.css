@@ -5540,3 +5540,8 @@ DOWNLOAD .download-table-wrapper {
         right: 0;
     }
 }
+
+.menu-nav > li:last-child > .submenu_dropdown-nav {
+    left: auto;
+    right: 0;
+}
