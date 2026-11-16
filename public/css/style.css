@@ -552,11 +552,11 @@ nav {
   left: 0;
   width: 100%;
   height: 100%;
-  background-image: url('/asset/img/backgroundfakultas.jpg');
+  background-image: url('/asset/img/banner-espmi.jpg');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  opacity: 0.2;
+  opacity: 0.5;
   z-index: 1;
 }
 
@@ -606,11 +606,11 @@ nav {
   left: 0;
   width: 100%;
   height: 100%;
-  background-image: url('/asset/img/backgroundfakultas.jpg');
+  background-image: url('/asset/img/banner-espmi.jpg');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  opacity: 0.2;
+  opacity: 0.5;
   z-index: 1;
 }
 

@@ -99,7 +99,7 @@ export default function Rekap({ prodi, prodiList, siklus, siklusList, identitas,
             <section className="hero">
                 <div className="container-hero text-center">
                     <h1 className="display-4 fw-bold fade-in">Rekap e-SPMI</h1>
-                    <p className="lead fade-in">Hasil Audit Mutu Internal · Universitas Abulyatama</p>
+                    <p className="lead fade-in">Hasil Audit Mutu Internal · Fakultas Teknik</p>
                 </div>
             </section>
 
@@ -126,7 +126,7 @@ export default function Rekap({ prodi, prodiList, siklus, siklusList, identitas,
                                 <i className="fa-solid fa-arrow-left me-2"></i>Monitoring
                             </Link>
                             {[['dt', 'DT'], ['ptk', 'PTK']].map(([jenis, label]) => (
-                                <div key={jenis} className="btn-group">
+                                <div key={jenis} className="btn-group d-none">
                                     <a href={laporanHref(jenis)} target="_blank" rel="noopener noreferrer" className="btn btn-outline-success">
                                         <i className="fa-solid fa-file-pdf me-2"></i>{label}
                                     </a>
@@ -238,8 +238,9 @@ export default function Rekap({ prodi, prodiList, siklus, siklusList, identitas,
                             <span className="ms-auto">Garis tipis: batas 60 · 75 · 85</span>
                         </div>
                     </div>
-
-                    <div className="esp-card overflow-hidden">
+                    
+                    <div className="esp-card overflow-hidden d-none">
+                    {/* <div className="esp-card overflow-hidden"> */}
                         <div className="table-responsive">
                             <table className="table align-middle mb-0 rk-table">
                                 <thead>

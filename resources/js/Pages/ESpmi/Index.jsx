@@ -385,7 +385,7 @@ function EspmiPage({ standars, prodi, prodiList, siklus, siklusList, skorMax, ke
             <section className="hero">
                 <div className="container-hero text-center">
                     <h1 className="display-4 fw-bold fade-in">e-SPMI</h1>
-                    <p className="lead fade-in">Audit Mutu Internal · Universitas Abulyatama</p>
+                    <p className="lead fade-in">Audit Mutu Internal · Fakultas Teknik</p>
                 </div>
             </section>
 

@@ -183,8 +183,8 @@ Route::middleware('qa')->group(function () {
     Route::get('/e-spmi/rekap', [EspmiRekapController::class, 'index']);
 
     // Laporan cetak e-SPMI: DT & PTK (PDF)
-    Route::get('/e-spmi/laporan/dt', [EspmiLaporanController::class, 'dt']);
-    Route::get('/e-spmi/laporan/ptk', [EspmiLaporanController::class, 'ptk']);
+    // Route::get('/e-spmi/laporan/dt', [EspmiLaporanController::class, 'dt']);
+    // Route::get('/e-spmi/laporan/ptk', [EspmiLaporanController::class, 'ptk']);
 });
 
 Route::get('/inspira', function () {
